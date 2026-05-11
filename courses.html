@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Innovation Lab | Programs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/><script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#d5e3ff",
+                        "on-tertiary-container": "#9a9c9d",
+                        "surface": "#fbf9f8",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-container": "#efeded",
+                        "outline-variant": "#c3c6d1",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#43474f",
+                        "secondary-fixed": "#ffe088",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#a7c8ff",
+                        "surface-bright": "#fbf9f8",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#799dd6",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-secondary-container": "#745c00",
+                        "tertiary": "#1c1f20",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed": "#001b3c",
+                        "surface-container-highest": "#e4e2e2",
+                        "outline": "#737780",
+                        "background": "#fbf9f8",
+                        "primary": "#001e40",
+                        "on-background": "#1b1c1c",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "tertiary-fixed": "#e1e3e4",
+                        "primary-container": "#003366",
+                        "inverse-on-surface": "#f2f0f0",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "inverse-surface": "#303030",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "surface-container-high": "#eae8e7",
+                        "secondary-container": "#fed65b",
+                        "surface-variant": "#e4e2e2",
+                        "surface-dim": "#dbd9d9",
+                        "secondary": "#735c00",
+                        "surface-container-low": "#f5f3f3",
+                        "tertiary-container": "#313435",
+                        "surface-tint": "#3a5f94",
+                        "on-tertiary-fixed": "#191c1d",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454748"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "container-max": "1280px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "h2": ["Inter"],
+                        "body-md": ["Inter"],
+                        "h3": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "700"}],
+                        "h2": ["36px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .modal-open { overflow: hidden; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md dark:bg-slate-900/90 border-b border-slate-100 dark:border-slate-800 shadow-sm shadow-blue-900/5">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3 cursor-pointer active:scale-95 transition-transform">
+<img src="IMG-20260414-WA0042_024908-removebg-preview.png" class="h-11 w-11 object-contain drop-shadow-sm hover:drop-shadow-md transition-all duration-200" data-icon="hub">
+<span class="text-xl font-bold tracking-tighter text-blue-900 dark:text-white uppercase font-h1">Kwara Innovation Lab</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md" href="index.html">Home</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md" href="#programs">Courses</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md" href="#network">Network</a>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold text-sm hover:opacity-80 transition-opacity duration-200 cursor-pointer active:scale-95 transition-transform">Join Now</button>
+</nav>
+<button class="md:hidden material-symbols-outlined" data-icon="menu">menu</button>
+</div>
+</header>
+<div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+    <div id="menu-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+    <div class="absolute top-0 right-0 h-full w-72 bg-white shadow-2xl flex flex-col p-8 gap-6">
+        <div class="flex justify-between items-center mb-4">
+            <span class="text-lg font-bold text-blue-900 uppercase">Menu</span>
+            <button id="close-menu" class="material-symbols-outlined text-slate-500">close</button>
+        </div>
+        <a class="text-slate-700 font-medium text-lg hover:text-blue-800 transition-colors" href="index.html">Home</a>
+        <a class="text-slate-700 font-medium text-lg hover:text-blue-800 transition-colors" href="#programs">Courses</a>
+        <a class="text-slate-700 font-medium text-lg hover:text-blue-800 transition-colors" href="#network">Network</a>
+        <button class="mt-4 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:opacity-80 transition-opacity">Join Now</button>
+    </div>
+</div>
+<main class="min-h-screen pb-xl">
+<!-- Hero / Section Header -->
+<section id="programs" class="pt-xl pb-lg px-gutter max-w-7xl mx-auto text-center">
+<h1 class="font-h1 text-h1 text-primary mb-sm">Explore Our Programs</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Industry-relevant training designed to prepare you for global opportunities. Join a community of forward-thinkers.
+            </p>
+</section>
+<!-- Category Filters -->
+<section class="mb-lg px-gutter overflow-x-auto hide-scrollbar">
+<div class="flex justify-center min-w-max gap-3">
+<button class="px-6 py-2.5 rounded-full bg-primary-container text-white font-semibold text-sm shadow-md">All</button>
+<button class="px-6 py-2.5 rounded-full bg-white text-on-surface-variant border border-outline-variant font-medium text-sm hover:border-primary transition-colors">Tech</button>
+<button class="px-6 py-2.5 rounded-full bg-white text-on-surface-variant border border-outline-variant font-medium text-sm hover:border-primary transition-colors">AI</button>
+<button class="px-6 py-2.5 rounded-full bg-white text-on-surface-variant border border-outline-variant font-medium text-sm hover:border-primary transition-colors">Design</button>
+<button class="px-6 py-2.5 rounded-full bg-white text-on-surface-variant border border-outline-variant font-medium text-sm hover:border-primary transition-colors">Enterprise</button>
+<button class="px-6 py-2.5 rounded-full bg-white text-on-surface-variant border border-outline-variant font-medium text-sm hover:border-primary transition-colors">Schools</button>
+</div>
+</section>
+<!-- Program Grid -->
+<section id="programs-grid" class="max-w-7xl mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,51,102,0.05)] border border-slate-100 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 card-image" data-alt="Web development workspace with code editor and modern tech setup" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop" onerror="this.src='https://via.placeholder.com/500x300?text=Web+Development'"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-sm">Popular</div>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded text-xs font-bold uppercase">Tech</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-xs">WEB DEVELOPMENT / PROGRAMMING</h3>
+<p class="text-on-surface-variant mb-md text-body-md">'Master modern web technologies'</p>
+<div class="flex flex-wrap gap-y-2 gap-x-4 mb-lg text-sm text-slate-500 font-medium">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span> 6 months</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="trending_up">trending_up</span> Beginner</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="devices">devices</span> Hybrid</div>
+</div>
+<button class="mt-auto w-full py-3 bg-white border-2 border-primary-container text-primary-container font-bold rounded-lg hover:bg-primary-container hover:text-white transition-all">View Details</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,51,102,0.05)] border border-slate-100 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 card-image" data-alt="UI/UX Design with stylus and tablet" src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop" onerror="this.src='https://via.placeholder.com/500x300?text=UI+UX+Design'"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-sm">High Demand</div>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded text-xs font-bold uppercase">Design</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-xs">UI/UX Design</h3>
+<p class="text-on-surface-variant mb-md text-body-md">'Craft beautiful user experiences'</p>
+<div class="flex flex-wrap gap-y-2 gap-x-4 mb-lg text-sm text-slate-500 font-medium">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span> 8 weeks</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="trending_up">trending_up</span> Intermediate</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="cloud">cloud</span> Virtual</div>
+</div>
+<button class="mt-auto w-full py-3 bg-white border-2 border-primary-container text-primary-container font-bold rounded-lg hover:bg-primary-container hover:text-white transition-all">View Details</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,51,102,0.05)] border border-slate-100 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden bg-gradient-to-br from-teal-400 to-green-500 flex items-center justify-center">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 card-image" data-alt="Data science and machine learning visualization" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop" onerror="this.src='https://via.placeholder.com/500x300?text=Data+Science'"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-sm">New</div>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded text-xs font-bold uppercase">AI / Schools</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-xs">DATA SCIENCE / MACHINE LEARNING</h3>
+<p class="text-on-surface-variant mb-md text-body-md">'Master data science and machine learning concepts'</p>
+<div class="flex flex-wrap gap-y-2 gap-x-4 mb-lg text-sm text-slate-500 font-medium">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span> 6 weeks</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="trending_up">trending_up</span> All Levels</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span> Onsite</div>
+</div>
+<button class="mt-auto w-full py-3 bg-white border-2 border-primary-container text-primary-container font-bold rounded-lg hover:bg-primary-container hover:text-white transition-all">View Details</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,51,102,0.05)] border border-slate-100 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 card-image" data-alt="Data analysis dashboard and analytics" src="https://share.google/XSMPK9Qib5OmvjmXZ" onerror="this.src='https://via.placeholder.com/500x300/FF6B6B/FFFFFF?text=Data+Analysis'"/>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded text-xs font-bold uppercase">Tech</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-xs">Data Analysis</h3>
+<p class="text-on-surface-variant mb-md text-body-md">'Unlock insights from data'</p>
+<div class="flex flex-wrap gap-y-2 gap-x-4 mb-lg text-sm text-slate-500 font-medium">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span> 10 weeks</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="trending_up">trending_up</span> Beginner</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="devices">devices</span> Hybrid</div>
+</div>
+<button class="mt-auto w-full py-3 bg-white border-2 border-primary-container text-primary-container font-bold rounded-lg hover:bg-primary-container hover:text-white transition-all">View Details</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,51,102,0.05)] border border-slate-100 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 card-image" data-alt="Cybersecurity and networking" src="https://share.google/lC2GO13Lgk6OjrZja" onerror="this.src='https://via.placeholder.com/500x300/1E40AF/FFFFFF?text=Cybersecurity'"/>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded text-xs font-bold uppercase">Tech</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-xs">CYBERSECURITY & NETWORKING</h3>
+<p class="text-on-surface-variant mb-md text-body-md">'Protect systems and networks from threats'</p>
+<div class="flex flex-wrap gap-y-2 gap-x-4 mb-lg text-sm text-slate-500 font-medium">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span> 5 months</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="trending_up">trending_up</span> Intermediate</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="devices">devices</span> Hybrid</div>
+</div>
+<button class="mt-auto w-full py-3 bg-white border-2 border-primary-container text-primary-container font-bold rounded-lg hover:bg-primary-container hover:text-white transition-all">View Details</button>
+</div>
+</div>
+
+<!-- Card 6 -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,51,102,0.05)] border border-slate-100 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 card-image" data-alt="Robotics and AI laboratory" src="https://share.google/W5AE2ag71b0UF4G9l" onerror="this.src='https://via.placeholder.com/500x300/4F46E5/FFFFFF?text=Robotics+AI'"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-sm">New</div>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded text-xs font-bold uppercase">AI</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-xs">ROBOTICS / AI</h3>
+<p class="text-on-surface-variant mb-md text-body-md">'Build intelligent systems and robots'</p>
+<div class="flex flex-wrap gap-y-2 gap-x-4 mb-lg text-sm text-slate-500 font-medium">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span> 6 months</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="trending_up">trending_up</span> Intermediate</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span> Onsite</div>
+</div>
+<button class="mt-auto w-full py-3 bg-white border-2 border-primary-container text-primary-container font-bold rounded-lg hover:bg-primary-container hover:text-white transition-all">View Details</button>
+</div>
+</div>
+
+<!-- Card 7 -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(0,51,102,0.05)] border border-slate-100 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300">
+<div class="h-48 relative overflow-hidden bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 card-image" data-alt="Video animation and motion graphics" src="https://share.google/LLVhGUH19LuSw2W1D" onerror="this.src='https://via.placeholder.com/500x300/D97706/FFFFFF?text=Video+Animation'"/>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 rounded text-xs font-bold uppercase">Design</div>
+</div>
+<div class="p-md flex flex-col flex-grow">
+<h3 class="font-h3 text-h3 text-primary mb-xs">VIDEO ANIMATION</h3>
+<p class="text-on-surface-variant mb-md text-body-md">'Create stunning visual stories'</p>
+<div class="flex flex-wrap gap-y-2 gap-x-4 mb-lg text-sm text-slate-500 font-medium">
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span> 4 months</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="trending_up">trending_up</span> Beginner</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[18px]" data-icon="cloud">cloud</span> Virtual</div>
+</div>
+<button class="mt-auto w-full py-3 bg-white border-2 border-primary-container text-primary-container font-bold rounded-lg hover:bg-primary-container hover:text-white transition-all">View Details</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Network Section -->
+<section id="network" class="max-w-7xl mx-auto px-gutter py-xl text-center bg-gradient-to-r from-blue-50 to-slate-50 rounded-xl my-xl">
+<h2 class="font-h2 text-h2 text-primary mb-md">Connect with Our Community</h2>
+<p class="text-body-lg text-on-surface-variant mb-lg max-w-2xl mx-auto">Join thousands of innovators, learners, and tech enthusiasts building the future together.</p>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-opacity">Join Our Network</button>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#003366] border-t border-blue-900">
+<div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<div class="text-2xl font-black text-white">Kwara Innovation Lab</div>
+<p class="text-slate-300 text-sm leading-relaxed">© 2026 Kwara Innovation Lab Global. Advancing Human Excellence through Technology.</p>
+<!-- Social Media Links -->
+<div class="flex gap-3 mt-4">
+<a id="social-x" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="X (Twitter)">
+<i class="fab fa-x text-white"></i>
+</a>
+<a id="social-linkedin" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="LinkedIn">
+<i class="fab fa-linkedin text-white"></i>
+</a>
+<a id="social-instagram" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="Instagram">
+<i class="fab fa-instagram text-white"></i>
+</a>
+<a id="social-tiktok" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="TikTok">
+<i class="fab fa-tiktok text-white"></i>
+</a>
+<a id="social-facebook" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="Facebook">
+<i class="fab fa-facebook text-white"></i>
+</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-bold uppercase text-xs tracking-widest">Resources</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-300 text-sm hover:text-amber-300 transition-colors" href="#">Academic Policy</a></li>
+<li><a class="text-slate-300 text-sm hover:text-amber-300 transition-colors" href="#">Research Ethics</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-bold uppercase text-xs tracking-widest">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-300 text-sm hover:text-amber-300 transition-colors" href="#">Privacy Hub</a></li>
+<li><a class="text-slate-300 text-sm hover:text-amber-300 transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-bold uppercase text-xs tracking-widest">Connect</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-300 text-sm hover:text-amber-300 transition-colors" href="#">Institutional Contact</a></li>
+<li><a class="text-slate-300 text-sm hover:text-amber-300 transition-colors" href="#">Global Hubs</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-white border-t border-slate-100 z-50 md:hidden shadow-[0_-4px_10px_rgba(0,51,102,0.05)]">
+<div class="flex flex-col items-center justify-center text-[#003366] bg-blue-50 rounded-xl px-3 py-1">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<a href="#" class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter">Programs</a>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<a href="index.html" class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter">Home</a>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter">Network</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-tighter">Apply</span>
+</div>
+</nav>
+<!-- Modal (Hidden by default, used for demonstration) -->
+<div class="fixed inset-0 z-[100] bg-white overflow-y-auto hidden" id="program-modal">
+<!-- Modal Header (Non-sticky but contains back button) -->
+<div class="max-w-4xl mx-auto px-gutter py-8">
+<button class="mb-8 flex items-center gap-2 text-primary hover:gap-3 transition-all font-semibold" onclick="document.getElementById('program-modal').classList.add('hidden'); document.body.classList.remove('modal-open')">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+                Back to Programs
+            </button>
+<div class="flex items-center gap-3 mb-4">
+    <span class="badge-label bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-sm">Popular</span>
+    <span class="category-label text-sm font-bold text-primary-container uppercase tracking-wider">Tech Category</span>
+</div>
+<h2 class="modal-title font-h1 text-h1 text-primary mb-md"></h2>
+<p class="modal-desc font-body-lg text-body-lg text-on-surface-variant mb-xl leading-relaxed"></p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl mb-xl">
+    <div class="bg-surface p-md rounded-xl border border-outline-variant">
+        <h4 class="font-h3 text-[18px] text-primary mb-md flex items-center gap-2">
+            <span class="material-symbols-outlined">fact_check</span> Requirements
+        </h4>
+        <ul class="modal-requirements space-y-3 text-on-surface-variant"></ul>
+    </div>
+    <div class="space-y-6">
+        <div>
+            <h4 class="text-label-caps text-slate-400 mb-1">PROGRAM DETAILS</h4>
+            <div class="flex items-center gap-4 py-2 border-b border-slate-100">
+                <span class="material-symbols-outlined text-primary">calendar_today</span>
+                <div>
+                    <p class="modal-start text-sm font-bold text-primary"></p>
+                    <p class="modal-duration text-xs text-slate-500"></p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 py-2 border-b border-slate-100">
+                <span class="material-symbols-outlined text-primary">verified</span>
+                <div>
+                    <p class="text-sm font-bold text-primary">Certified Completion</p>
+                    <p class="modal-cert text-xs text-slate-500"></p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4 class="text-label-caps text-slate-400 mb-1">CAREER OUTCOMES</h4>
+            <div class="modal-careers flex flex-wrap gap-2"></div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-xl">
+    <h4 class="font-h3 text-h3 text-primary mb-md">What You Will Learn</h4>
+    <div class="modal-learn grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+</div>
+
+<!-- Chat CTA Section -->
+<div class="mt-xl pt-xl border-t border-slate-200">
+<div class="bg-gradient-to-r from-primary via-primary-container to-primary-fixed p-lg rounded-xl text-white">
+<h4 class="font-h3 text-h3 mb-sm">Ready to Get Started?</h4>
+<p class="text-white/90 mb-lg">Chat with our program advisor to answer your questions and find the perfect course for you.</p>
+<a href="https://wa.me/2348066406464?text=Hello%20I%20want%20to%20learn%20more%20about%20your%20services" target="_blank" class="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-slate-100 transition-all shadow-lg hover:shadow-xl">
+    <i class="fab fa-whatsapp"></i>
+    Chat with Our Agent
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Program data for each card
+    // Replace the programs array with this corrected order:
+
+    const programs = [
+        // Card 1 - WEB DEVELOPMENT
+        {
+            badge: "Popular",
+            category: "Tech Category",
+            title: "WEB DEVELOPMENT / PROGRAMMING",
+            description: "Unlock the world of web creation by mastering the foundations and modern frameworks of the frontend ecosystem. This comprehensive program bridges the gap between creative design and robust technical implementation, preparing you for immediate roles in high-growth startups and global tech firms.",
+            requirements: ["Laptop (required)", "Basic Computer Literacy", "Logical thinking and problem-solving interest"],
+            startDate: "Starting Date: To Be Announced",
+            duration: "6 months",
+            certificate: "Kwara Innovation Lab Certificate in Web Development & Programming",
+            careers: ["Frontend Developer", "Backend Developer", "Full Stack Developer", "Software Engineer", "Freelance Web Developer"],
+            learn: [
+                { icon: "html", title: "Foundations", desc: "Semantic HTML5, advanced CSS Grid/Flexbox, and Responsive Design principles." },
+                { icon: "javascript", title: "Modern JS", desc: "ES6+ syntax, Asynchronous Programming, and API Integration." },
+                { icon: "layers", title: "React Framework", desc: "Component architecture, State Management, and Next.js optimization." },
+                { icon: "layers", title: "Node.js & Python", desc: "Backend development with Node.js or Python." },
+                { icon: "layers", title: "Deployment", desc: "Building, deploying and managing full websites." },
+            ]
+        },
+        // Card 2 - UI/UX DESIGN
+        {
+            badge: "High Demand",
+            category: "Design Category",
+            title: "UI/UX Design",
+            description: "Learn to create compelling, user-centered digital experiences. This program covers research, wireframing, prototyping, and design systems used by top companies worldwide.",
+            requirements: ["Laptop (required)", "Creative interest in art or design is an advantage"],
+            startDate: "Starting Date: To Be Announced",
+            duration: "8 weeks",
+            certificate: "Kwara Innovation Lab Certificate in UI/UX Design",
+            careers: ["UI Designer", "UX Researcher", "Product Designer", "Interaction Designer"],
+            learn: [
+                { icon: "palette", title: "Design Principles", desc: "Color theory, typography, and layout principles." },
+                { icon: "dashboard", title: "Wireframing", desc: "Creating wireframes and user flows." },
+                { icon: "group", title: "User Research", desc: "User interviews and usability testing." },
+                { icon: "auto_awesome", title: "Prototyping", desc: "Interactive prototypes with Figma." },
+            ]
+        },
+        // Card 3 - DATA SCIENCE / MACHINE LEARNING
+        {
+            badge: "New",
+            category: "AI / Schools",
+            title: "DATA SCIENCE / MACHINE LEARNING",
+            description: "Master data science and machine learning concepts from the ground up. Learn to extract insights from data and build intelligent systems using Python and modern ML frameworks.",
+            requirements: ["Laptop (required)", "Basic math or statistics knowledge", "Basic computer literacy"],
+            startDate: "Starting Date: To Be Announced",
+            duration: "6 weeks",
+            certificate: "Kwara Innovation Lab Certificate in Data Science & Machine Learning",
+            careers: ["Data Scientist", "Machine Learning Engineer", "AI Research Analyst", "Predictive Analytics Specialist", "Freelance ML Consultant"],
+            learn: [
+                { icon: "bar_chart", title: "Python programming", desc: "NumPy, Pandas, and data manipulation." },
+                { icon: "insights", title: "Data Visualization", desc: "Matplotlib, Seaborn, and storytelling with data." },
+                { icon: "psychology", title: "ML Models", desc: "Supervised and unsupervised learning algorithms." },
+                { icon: "model_training", title: "Deep Learning", desc: "Neural networks with TensorFlow and Keras." },
+            ]
+        },
+        // Card 4 - DATA ANALYSIS
+        {
+            badge: "",
+            category: "Tech Category",
+            title: "Data Analysis",
+            description: "Unlock the power of data to drive better decisions. This program teaches you to collect, clean, analyze, and present data using industry-standard tools.",
+            requirements: ["Laptop (required)", "Basic math and computer literacy", "No prior coding experience needed"],
+            startDate: "Starting Date: To Be Announced",
+            duration: "10 weeks",
+            certificate: "Kwara Innovation Lab Certificate in Data Analysis",
+            careers: ["Data Analyst", "Business Intelligence Analyst", "Reporting Specialist", "Operations Analyst"],
+            learn: [
+                { icon: "table_chart", title: "Excel & Sheets", desc: "Spreadsheet skills with Excel and Google Sheets." },
+                { icon: "query_stats", title: "SQL", desc: "Querying databases and extracting insights." },
+                { icon: "bar_chart", title: "Power BI / Tableau", desc: "Data visualization with Power BI and Tableau." },
+                { icon: "summarize", title: "Reporting", desc: "Presenting findings to stakeholders." },
+            ]
+        },
+        // Card 5 - CYBERSECURITY
+        {
+            badge: "",
+            category: "Tech Category",
+            title: "CYBERSECURITY & NETWORKING",
+            description: "Protect systems and networks from threats. This program teaches you foundational and advanced cybersecurity concepts preparing you for roles in IT security.",
+            requirements: ["Laptop (required)", "Basic computer and internet knowledge", "Logical thinking and problem-solving interest"],
+            startDate: "Starting Date: To Be Announced",
+            duration: "5 months",
+            certificate: "Kwara Innovation Lab Certificate in Cybersecurity & Networking",
+            careers: ["Network Administrator","Cybersecurity Analyst","Ethical Hacker / Penetration Tester","IT Security Consultant","SOC Analyst"],
+            learn: [
+                { icon: "security", title: "Networking Fundamentals", desc: "Networking fundamentals and how the internet works." },
+                { icon: "verified_user", title: "Penetration Testing", desc: "Cybersecurity threats, risks and defence strategies." },
+                { icon: "lock", title: "Cyber Protection", desc: "System security, firewalls and encryption." },
+                { icon: "bug_report", title: "Ethical Hacking", desc: "Ethical hacking and penetration testing basics." },
+            ]
+        },
+        // Card 6 - ROBOTICS / AI
+        {
+            badge: "New",
+            category: "AI",
+            title: "ROBOTICS / AI",
+            description: "Build intelligent systems and robots. Learn robotics fundamentals, AI algorithms, and practical implementation using modern tools and frameworks.",
+            requirements: ["Laptop (required)", "Basic interest in technology and electronics", "No prior robotics experience needed"],
+            startDate: "Starting Date: To Be Announced",
+            duration: "6 months",
+            certificate: "Kwara Innovation Lab Certificate in Robotics & AI",
+            careers: ["Robotics Engineer", "AI Systems Developer", "Automation Specialist", "Software Engineer", "ML Engineer"],
+            learn: [
+                { icon: "smart_toy", title: "Robotics Basics", desc: "Introduction to robotics and hardware components." },
+                { icon: "psychology", title: "AI Algorithms", desc: "Machine learning and AI fundamentals." },
+                { icon: "build", title: "Building Systems", desc: "Designing and building intelligent robots." },
+                { icon: "auto_awesome", title: "Deployment", desc: "Deploying AI models in real-world applications." },
+            ]
+        },
+        // Card 7 - VIDEO ANIMATION
+        {
+            badge: "",
+            category: "Design",
+            title: "VIDEO ANIMATION",
+            description: "Create stunning visual stories. Master animation techniques, motion graphics, and video production using industry-standard tools.",
+            requirements: ["Laptop (required)", "Creative interest in art or design is an advantage"],
+            startDate: "Starting Date: To Be Announced",
+            duration: "4 months",
+            certificate: "Kwara Innovation Lab Certificate in VIDEO ANIMATION",
+            careers: ["Animation Artist", "Motion Graphic Designer", "Video Editor", "Visual Effects Specialist"],
+            learn: [
+                { icon: "movie", title: "Animation Principles", desc: "Principles of animation and motion design." },
+                { icon: "auto_awesome", title: "2D Animation", desc: "2D animation using Adobe Animate or After Effects." },
+                { icon: "theaters", title: "Character Design", desc: "Character design and storyboarding." },
+                { icon: "auto_awesome", title: "Visual Effects", desc: "Motion graphics and visual effects." },
+            ]
+        }
+    ];
+
+    // Populate and show modal
+    function openModal(index) {
+        const p = programs[index];
+
+        document.querySelector('#program-modal .badge-label').textContent = p.badge;
+        document.querySelector('#program-modal .badge-label').style.display = p.badge ? '' : 'none';
+        document.querySelector('#program-modal .category-label').textContent = p.category;
+        document.querySelector('#program-modal .modal-title').textContent = p.title;
+        document.querySelector('#program-modal .modal-desc').textContent = p.description;
+        document.querySelector('#program-modal .modal-start').textContent = p.startDate;
+        document.querySelector('#program-modal .modal-duration').textContent = 'Duration: ' + p.duration;
+        document.querySelector('#program-modal .modal-cert').textContent = p.certificate;
+
+        // Requirements
+        const reqList = document.querySelector('#program-modal .modal-requirements');
+        reqList.innerHTML = p.requirements.map(r => `
+            <li class="flex items-start gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px]">check_circle</span>
+                ${r}
+            </li>`).join('');
+
+        // Careers
+        const careerContainer = document.querySelector('#program-modal .modal-careers');
+        careerContainer.innerHTML = p.careers.map(c => `
+            <span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-lg">${c}</span>`).join('');
+
+        // What You Will Learn
+        const learnGrid = document.querySelector('#program-modal .modal-learn');
+        learnGrid.innerHTML = p.learn.map(l => `
+            <div class="p-6 bg-white border border-slate-100 rounded-xl shadow-sm">
+                <div class="w-10 h-10 rounded-full bg-blue-50 text-primary flex items-center justify-center mb-4">
+                    <span class="material-symbols-outlined">${l.icon}</span>
+                </div>
+                <h5 class="font-bold text-primary mb-2">${l.title}</h5>
+                <p class="text-sm text-on-surface-variant">${l.desc}</p>
+            </div>`).join('');
+
+        document.getElementById('program-modal').classList.remove('hidden');
+        document.body.classList.add('modal-open');
+        window.scrollTo(0, 0);
+    }
+
+    // Attach click handlers by card index
+    // Replace the "Attach click handlers by card index" section with this:
+
+    // Social Media Configuration - Just add your links here!
+    const socialLinks = {
+        x: 'https://x.com/tech2disn45026',
+        linkedin: 'https://www.linkedin.com/company/tech2grassrootsafrica/',
+        instagram: 'https://www.instagram.com/tech2grassroots?igsh=MWF1YTA5Y254cnR1Ng==',
+        tiktok: 'https://www.tiktok.com/@tech2grassroots.a?_r=1&_t=ZS-95XWSOCz8Cr',
+        facebook: 'https://www.facebook.com/tech2grassroot?mibextid=ZbWKwL'
+    };
+
+    // Initialize social media links
+    function initializeSocialLinks() {
+        document.getElementById('social-x').href = socialLinks.x;
+        document.getElementById('social-linkedin').href = socialLinks.linkedin;
+        document.getElementById('social-instagram').href = socialLinks.instagram;
+        document.getElementById('social-tiktok').href = socialLinks.tiktok;
+        document.getElementById('social-facebook').href = socialLinks.facebook;
+    }
+
+    // Chat Agent Function
+    function openChatAgent() {
+        alert('Chat Agent Feature!\n\nIn a full implementation, this would open a live chat with an AI agent or support team to help with course selection and enrollment.');
+        // You can replace this with actual chat service integration like Intercom, Drift, or custom chat widget
+    }
+
+    // Attach click handlers by card index
+    const programCards = document.querySelectorAll('section#programs-grid > div[class*="rounded-xl"]');
+    programCards.forEach((card, index) => {
+        const btn = card.querySelector('button');
+        if (btn) {
+            btn.addEventListener('click', () => openModal(index));
+        }
+    });
+
+    // Mobile menu
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function openMenu() {
+        mobileMenu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelector('button.md\\:hidden').addEventListener('click', openMenu);
+    document.getElementById('close-menu').addEventListener('click', closeMenu);
+    document.getElementById('menu-backdrop').addEventListener('click', closeMenu);
+
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Initialize all components on page load
+    initializeSocialLinks();
+</script>
+</body></html>

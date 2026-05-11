@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kwara Innovation Lab | Building Africa’s Next Generation of Innovators</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/><script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fbf9f8",
+                    "surface-bright": "#fbf9f8",
+                    "on-tertiary-container": "#9a9c9d",
+                    "on-secondary-fixed": "#241a00",
+                    "tertiary-fixed-dim": "#c5c7c8",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-background": "#1b1c1c",
+                    "secondary-fixed": "#ffe088",
+                    "on-tertiary-fixed-variant": "#454748",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#dbd9d9",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e4e2e2",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#313435",
+                    "secondary-container": "#fed65b",
+                    "surface-container-highest": "#e4e2e2",
+                    "inverse-primary": "#a7c8ff",
+                    "primary": "#001e40",
+                    "surface-container": "#efeded",
+                    "primary-container": "#003366",
+                    "outline-variant": "#c3c6d1",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#001b3c",
+                    "surface-container-high": "#eae8e7",
+                    "primary-fixed": "#d5e3ff",
+                    "background": "#fbf9f8",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "tertiary": "#1c1f20",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-secondary-container": "#745c00",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#1b1c1c",
+                    "error-container": "#ffdad6",
+                    "secondary": "#735c00",
+                    "on-surface-variant": "#43474f",
+                    "tertiary-fixed": "#e1e3e4",
+                    "inverse-surface": "#303030",
+                    "surface-container-low": "#f5f3f3",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#3a5f94",
+                    "on-primary-container": "#799dd6",
+                    "outline": "#737780",
+                    "on-tertiary-fixed": "#191c1d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "container-max": "1280px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "lg": "48px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "h3": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h1": ["Inter"],
+                    "h2": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["36px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hero-gradient { background: radial-gradient(circle at top right, #d5e3ff 0%, #fbf9f8 60%); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md dark:bg-slate-900/90 border-b border-slate-100 dark:border-slate-800 shadow-sm shadow-blue-900/5">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<div class="flex items-center gap-3 cursor-pointer active:scale-95 transition-transform">
+<img src="IMG-20260414-WA0042_024908-removebg-preview.png" class="h-11 w-11 object-contain drop-shadow-sm hover:drop-shadow-md transition-all duration-200" data-icon="hub">
+<span class="text-xl font-bold tracking-tighter text-blue-900 dark:text-white uppercase font-h1">Kwara Innovation Lab</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md" href="#about">Vision</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md" href="courses.html">Courses</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md" href="#network">Network</a>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold text-sm hover:opacity-80 transition-opacity duration-200 cursor-pointer active:scale-95 transition-transform">Join Now</button>
+</nav>
+<button class="md:hidden material-symbols-outlined" data-icon="menu">menu</button>
+</div>
+</header>
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+    <div id="menu-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+    <div class="absolute top-0 right-0 h-full w-72 bg-white shadow-2xl flex flex-col p-8 gap-6">
+        <div class="flex justify-between items-center mb-4">
+            <span class="text-lg font-bold text-blue-900 uppercase">Menu</span>
+            <button id="close-menu" class="material-symbols-outlined text-slate-500">close</button>
+        </div>
+        <a class="text-slate-700 font-medium text-lg hover:text-blue-800 transition-colors" href="#about">Vision</a>
+        <a class="text-slate-700 font-medium text-lg hover:text-blue-800 transition-colors" href="courses.html">Courses</a>
+        <a class="text-slate-700 font-medium text-lg hover:text-blue-800 transition-colors" href="#network">Network</a>
+        <button class="mt-4 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:opacity-80 transition-opacity">Join Now</button>
+    </div>
+</div>
+<main class="pt-15">
+<!-- Hero Section -->
+<section class="hero-gradient min-h-[795px] flex items-center px-6 md:px-lg overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-md items-center py-xl">
+<div class="space-y-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-caps uppercase text-[10px]">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+                        Powered by Tech2Grassroots Africa
+                    </div>
+<h1 class="font-h1 text-h1 text-primary leading-[1.1] max-w-xl">
+                        Building Africa’s <span class="text-primary-container">Next Generation</span> of Innovators
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Empowering Kwara and beyond with digital excellence, connecting local talent to global technology ecosystems through institutional trust and forward-thinking innovation.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-base">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all flex items-center gap-2" href="courses.html">
+                            Explore Programs
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary/5 transition-all" href="#cta">
+                            Partner With Us
+                        </a>
+</div>
+</div>
+<div class="relative hidden md:block">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl"></div>
+<div class="relative bg-white p-4 rounded-[2rem] shadow-2xl shadow-primary-container/10 border border-white/50 rotate-2">
+<img class="rounded-[1.5rem] w-full h-[500px] object-cover" data-alt="A professional and energetic photograph of diverse young African innovators collaborating in a bright, modern technology lab in Kwara. The space is filled with high-end computer equipment, clean white surfaces, and warm natural light filtering through large windows. The overall aesthetic is institutional yet agile, mirroring the corporate-tech style of global hubs like MIT. The color palette emphasizes clean whites, deep blues, and subtle gold accents, creating a mood of intellectual prestige and future-focused ambition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu1rHm40jV0OO9Dwfb6KKw_NdXkjORtppLBh-VhtDGhkgWkfWW6L_1FSGEI9eh4-N4aBFu9eFRFxeA_FJICi2qn9luhxs7rmEgkBE-4dNorOkHRyCFWoYmP7OEYVY5a6qXB0sscOmOdnStBWjgW7R8ToYLPqa_b_pBV0cHjfRTcS1auyBl5dY_JJoms6wGtL2dQ-6MgDGgxyWYrYNMAiCmlOXBfZIHVBgu3Ugwxrgn0VQqh8KUQ1UvKAgCnS_MbWsAx5uz_nAl_j0"/>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl px-6 bg-white" id="about">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg items-center">
+<div class="md:col-span-2">
+<h2 class="font-h2 text-h2 text-primary mb-md">Bridging the Global Digital Gap</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-3xl">
+                            The Kwara Innovation Lab is a strategic catalyst designed to democratize access to elite technology education. Our mission is to transform Kwara into a premier African innovation hub by closing the digital divide and creating institutional pathways for talent to meet global demand. We don't just train; we integrate excellence into the grassroots.
+                        </p>
+</div>
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/30">
+<div class="flex items-center gap-3 mb-sm">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-h3 text-primary">Our Vision</span>
+</div>
+<p class="font-body-md text-on-surface-variant">To establish Africa’s most sustainable and impactful innovation ecosystem that fuels economic growth through technology-led education.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services (Bento Grid) -->
+<section class="py-xl px-6 bg-surface-bright" id="services">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-lg">
+<span class="font-label-caps text-secondary uppercase tracking-[0.2em]">Our Solutions</span>
+<h2 class="font-h2 text-h2 text-primary mt-base">World-Class Innovation Services</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-gutter h-auto md:h-[800px]">
+<!-- Tech Training -->
+<div class="md:col-span-2 md:row-span-1 bg-white p-lg rounded-xl shadow-sm border border-slate-100 group hover:shadow-xl hover:shadow-primary/5 transition-all">
+<div class="w-12 h-12 bg-primary-container/10 rounded-lg flex items-center justify-center text-primary mb-md">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-sm">Tech Training</h3>
+<p class="font-body-md text-on-surface-variant">Comprehensive coding, data science, and cloud computing programs tailored for industry 4.0 demands.</p>
+</div>
+<!-- STEAM AI -->
+<div class="md:col-span-1 md:row-span-1 bg-white p-lg rounded-xl shadow-sm border border-slate-100 group hover:shadow-xl hover:shadow-primary/5 transition-all">
+<div class="w-12 h-12 bg-secondary-container/20 rounded-lg flex items-center justify-center text-secondary mb-md">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+</div>
+<h3 class="font-h3 text-primary mb-sm text-xl">STEAM AI</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Integrating Artificial Intelligence into science and arts education.</p>
+</div>
+<!-- Enterprise Training -->
+<div class="md:col-span-1 md:row-span-1 bg-primary text-white p-lg rounded-xl shadow-xl shadow-primary/20 group hover:scale-[1.02] transition-all">
+<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-secondary mb-md">
+<span class="material-symbols-outlined" data-icon="corporate_fare">corporate_fare</span>
+</div>
+<h3 class="font-h3 mb-sm text-xl">Enterprise</h3>
+<p class="font-body-md text-slate-300 text-sm">Upskilling corporate teams with the latest digital tools and agile methodologies.</p>
+</div>
+<!-- Internships -->
+<div class="md:col-span-1 md:row-span-1 bg-white p-lg rounded-xl shadow-sm border border-slate-100 group hover:shadow-xl hover:shadow-primary/5 transition-all">
+<div class="w-12 h-12 bg-primary-container/10 rounded-lg flex items-center justify-center text-primary mb-md">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+</div>
+<h3 class="font-h3 text-primary mb-sm text-xl">Internships</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Connecting graduates to global internships and real-world project experience.</p>
+</div>
+<!-- Innovation Labs -->
+<div class="md:col-span-2 md:row-span-1 bg-surface-container-high p-lg rounded-xl border border-white relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform duration-500" data-alt="A sleek, futuristic office space designed for high-level innovation and research. The interior features floor-to-ceiling glass walls, minimalist ergonomic furniture, and high-tech workstations. The atmosphere is bright and airy, reflecting a clean light-mode aesthetic with a palette of soft whites and corporate blues. Subtle architectural details suggest a prestigious African institutional setting, where technology and agile collaboration are at the core of the experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAB3wEm6y00sJTdYYUYuPW9Ep8HUnns5RH8v3mxvKGERS_6Za8E4OXmGLWKyOeejh_1B5PVy2T0qZh3s1XPdGsT8w45oZPLSB8qaHJ9raea3c50v1r4hiX9aOSv2WBokmbt2reBkQIXYGodNxnWTHnLkPsy4mWjUxvq5zWGXJaTQEaIUcj6o4MkmvecidE7Alsq-CK6QPpmbnLbASSAGuN6AkentaTyNgEwpSLGzMJbh9vgIhkWYR_1yNkkG_TvD_xE4RYgs7SM4w"/>
+<div class="relative z-10">
+<h3 class="font-h3 text-h3 text-primary mb-sm">Innovation Labs</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Dedicated spaces for R&amp;D, prototyping, and startup incubation supported by top-tier infrastructure.</p>
+</div>
+</div>
+<!-- Talent Pipeline -->
+<div class="md:col-span-1 md:row-span-1 bg-secondary-container p-lg rounded-xl shadow-sm group hover:shadow-xl transition-all">
+<div class="w-12 h-12 bg-white/50 rounded-lg flex items-center justify-center text-secondary mb-md">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<h3 class="font-h3 text-primary mb-sm text-xl">Talent Pipeline</h3>
+<p class="font-body-md text-on-secondary-container text-sm">Building Africa’s largest vetted network of tech professionals.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Statistics -->
+<section class="py-xl bg-primary text-on-primary">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg text-center">
+<div>
+<div class="text-[64px] font-black text-secondary leading-none mb-2">500+</div>
+<div class="font-label-caps uppercase tracking-widest text-primary-fixed-dim">Youths Trained</div>
+</div>
+<div>
+<div class="text-[64px] font-black text-secondary leading-none mb-2">7+</div>
+<div class="font-label-caps uppercase tracking-widest text-primary-fixed-dim">Global Partnerships</div>
+</div>
+<div>
+
+</div>
+<div>
+<div class="text-[64px] font-black text-secondary leading-none mb-2">12+</div>
+<div class="font-label-caps uppercase tracking-widest text-primary-fixed-dim">African Nations</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Network / Map -->
+<section class="py-xl px-6 bg-white overflow-hidden" id="network">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="relative">
+<img class="w-full h-auto opacity-10" data-alt="A stylized, minimalist digital map of the African continent with glowing blue nodes representing the expanding network of Kwara Innovation Lab. The map is set against a clean, soft white background, using high-contrast lines and a sophisticated tech aesthetic. Points of connection are illuminated with vibrant blue and gold light, symbolizing growth, connectivity, and the flow of intellectual talent across borders in a light-themed, institutional style." data-location="Africa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJUngAmWzHMfzwn6TafTBsQvDa_pmDfW49b5EFnZLik7C9jY518WQh9F_EQ05XPLI-UtztZsTi3_e39RTIB6pWD0GxLKnNeWGwJQ2emU6lM_A8z-jGRk6RgrKsjYVUPBDXZc5w0lDy1QQJ0qvsM2mWFWQ3UypCAl5IwlN8Xym8pACYVKMkB66Kexqzb1v6n_RrQP-leV7PNNwLDastbJCGYG5KloMgcM_EmdRy01wLoRPiy1HGU88HRffFbxDm70qpt8QRey_-B2U"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-4 rounded-lg shadow-lg border border-primary/10 animate-pulse">
+<div class="text-xs font-bold text-primary">LAGOS HUB</div>
+<div class="text-[10px] text-on-surface-variant">Active Connection</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-lg border border-primary/10 animate-pulse translate-x-6">
+<div class="text-xs font-bold text-primary">OSHOGBO HUB</div>
+<div class="text-[10px] text-on-surface-variant">Active Connection</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-lg border border-primary/10 translate-x-16">
+<div class="text-xs font-bold text-primary">ILORIN LAB</div>
+<div class="text-[10px] text-on-surface-variant">Central Command</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-md">
+<span class="font-label-caps text-secondary">Global Reach</span>
+<h2 class="font-h2 text-h2 text-primary">An Expansion Across Borders</h2>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+                        Tech2Grassroots Africa is strategically scaling the Kwara Innovation Lab model across the continent. By leveraging shared resources and institutional frameworks, we are creating a unified digital corridor for African talent.
+                    </p>
+<ul class="space-y-sm">
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md font-semibold">Standardized Curriculum for Local Contexts</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md font-semibold">Cross-Border Talent Mobility Programs</span>
+</li>
+<li class="flex items-center gap-3 text-on-surface">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md font-semibold">Unified Research &amp; Innovation Data Bank</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Target Audience -->
+<section class="py-xl px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-lg">
+<h2 class="font-h2 text-h2 text-primary">Who We Serve</h2>
+<p class="text-on-surface-variant mt-sm">Tailored institutional solutions for every ecosystem stakeholder.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="bg-white p-lg rounded-xl shadow-sm hover:translate-y-[-8px] transition-all">
+<h4 class="font-h3 text-primary mb-sm">Youths &amp; Students</h4>
+<p class="text-sm text-on-surface-variant mb-md">Gaining the skills needed to compete in the global job market through hands-on learning.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all" href="courses.html">Apply Now <span class="material-symbols-outlined" data-icon="arrow_right_alt">arrow_right_alt</span></a>
+</div>
+<div class="bg-white p-lg rounded-xl shadow-sm hover:translate-y-[-8px] transition-all">
+<h4 class="font-h3 text-primary mb-sm">Schools &amp; Educators</h4>
+<p class="text-sm text-on-surface-variant mb-md">Certifying teachers and providing STEAM curriculum integration for modern classrooms.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all" href="#cta">Partner with Us <span class="material-symbols-outlined" data-icon="arrow_right_alt">arrow_right_alt</span></a>
+</div>
+<div class="bg-white p-lg rounded-xl shadow-sm hover:translate-y-[-8px] transition-all">
+<h4 class="font-h3 text-primary mb-sm">Governments</h4>
+<p class="text-sm text-on-surface-variant mb-md">Policy advisory and infrastructure development to drive regional digital transformation.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all" href="#cta">Consultation <span class="material-symbols-outlined" data-icon="arrow_right_alt">arrow_right_alt</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl px-6 bg-white">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div>
+<span class="font-label-caps text-secondary">Success Stories</span>
+<h2 class="font-h2 text-h2 text-primary mt-base">Voices from the Innovation Lab</h2>
+<div class="mt-lg p-lg bg-surface border-l-4 border-secondary italic text-body-lg text-primary relative">
+<span class="material-symbols-outlined absolute -top-4 -left-2 text-primary/10 text-[64px]" data-icon="format_quote">format_quote</span>
+                            "The Kwara Innovation Lab provided me with more than just coding skills; it gave me the network and professional polish required to secure a remote role with a Silicon Valley firm while living in Ilorin."
+                            <div class="mt-md not-italic flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+<img data-alt="A professional headshot of a confident young African woman tech professional, smiling softly against a minimalist, bright office background. She has a look of intellectual curiosity and success. The lighting is high-key and soft, fitting a premium light-theme corporate aesthetic. Her attire is professional yet modern, symbolizing the new generation of African tech talent being built by institutional innovation hubs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKQqriBjPiaAHxjcE6eyHFqtO11sAAJgAD-bktkpTBiYivAGDHeFYNCBUDiJuya7kogjowDOOisSOYARu-petqzuf4LD3pMOmOH2EFV0JK0Q233-hiHjEWo3GROw7Vl6jwf0k0OUczxMG5U8Znd5ezLCx1FroyBnVq3gwo29cl-U_71lmUW18abYmp19IGW7Z4bCxlk6XP1tODxRGB3hQyBrnH-mfs7lb_m_2he3X87UvP-9FmnM3ggjvSVcxYMJn6pPMGOs1LG-Q"/>
+</div>
+<div>
+<div class="font-bold text-primary">Aisha Bello</div>
+<div class="text-sm text-on-surface-variant">Software Engineer, Batch 22'</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl px-6 bg-secondary-container" id="cta">
+<div class="max-w-5xl mx-auto text-center space-y-md">
+<h2 class="font-h1 text-primary">Join us in building Africa’s largest innovation talent pipeline</h2>
+<p class="text-on-secondary-container font-body-lg max-w-2xl mx-auto">
+                    Whether you're an aspiring innovator or a strategic partner, there's a seat for you at the Kwara Innovation Lab.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center pt-base">
+<a href="https://wa.me/2348066406464?text=Hello%20I%20want%20to%20learn%20more%20about%20your%20services" class="bg-primary text-on-primary px-10 py-5 rounded-full font-bold shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-all">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+                        Chat with Us on WhatsApp
+                    </a>
+
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-blue-900 dark:bg-slate-950 text-white py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+<div class="col-span-1 md:col-span-1">
+<div class="text-2xl font-black text-white mb-4">Kwara Innovation Lab</div>
+<p class="text-slate-300 font-sans text-sm leading-relaxed mb-6">Empowering African Excellence through institutional trust and forward-thinking innovation.</p>
+<div class="flex gap-4">
+
+<a id="social-x" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="X (Twitter)">
+<i class="fab fa-x text-white"></i>
+</a>
+<a id="social-linkedin" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="LinkedIn">
+<i class="fab fa-linkedin text-white"></i>
+</a>
+<a id="social-instagram" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="Instagram">
+<i class="fab fa-instagram text-white"></i>
+</a>
+<a id="social-tiktok" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="TikTok">
+<i class="fab fa-tiktok text-white"></i>
+</a>
+<a id="social-facebook" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="Facebook">
+<i class="fab fa-facebook text-white"></i>
+</a>
+
+<a href="mailto:tech2disn@gmail.com" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" data-icon="mail" >
+    <i class="fab fa-envelope text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-yellow-500 font-label-caps uppercase text-xs">Explore</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Vision</a></li>
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Services</a></li>
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Network</a></li>
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block text-yellow-500 font-semibold" href="#">Apply</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-yellow-500 font-label-caps uppercase text-xs">Resources</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Whitepaper</a></li>
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Impact Reports</a></li>
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Case Studies</a></li>
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Press Kit</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-yellow-500 font-label-caps uppercase text-xs">Contact</h5>
+<ul class="space-y-4 text-sm text-slate-300">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-sm mt-1" data-icon="location_on">location_on</span>
+                        Kwara state library complex, Ilorin, Nigeria
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span>
+                        +2348066406464
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-sm" data-icon="alternate_email">alternate_email</span>
+                        tech2disn@gmail.com
+                    </li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 pt-12 mt-12 border-t border-white/10 text-center text-slate-400 text-xs">
+            © 2026 Kwara Innovation Lab. Empowering African Excellence.
+        </div>
+</footer>
+<script>
+    const socialLinks = {
+        x: 'https://x.com/tech2disn45026',
+        linkedin: 'https://www.linkedin.com/company/tech2grassrootsafrica/',
+        instagram: 'https://www.instagram.com/tech2grassroots?igsh=MWF1YTA5Y254cnR1Ng==',
+        tiktok: 'https://www.tiktok.com/@tech2grassroots.a?_r=1&_t=ZS-95XWSOCz8Cr',
+        facebook: 'https://www.facebook.com/tech2grassroot?mibextid=ZbWKwL'
+    };
+
+    // Initialize social media links
+    function initializeSocialLinks() {
+        document.getElementById('social-x').href = socialLinks.x;
+        document.getElementById('social-linkedin').href = socialLinks.linkedin;
+        document.getElementById('social-instagram').href = socialLinks.instagram;
+        document.getElementById('social-tiktok').href = socialLinks.tiktok;
+        document.getElementById('social-facebook').href = socialLinks.facebook;
+    }
+
+    // Call the function to initialize social media links
+    initializeSocialLinks();
+
+
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function openMenu() {
+        mobileMenu.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelector('button.md\\:hidden').addEventListener('click', openMenu);
+    document.getElementById('close-menu').addEventListener('click', closeMenu);
+    document.getElementById('menu-backdrop').addEventListener('click', closeMenu);
+
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+</script>
+</body></html>
