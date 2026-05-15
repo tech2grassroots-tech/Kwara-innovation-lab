@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
@@ -101,6 +101,19 @@
         body { font-family: 'Inter', sans-serif; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .hero-gradient { background: radial-gradient(circle at top right, #d5e3ff 0%, #fbf9f8 60%); }
+        
+.group:hover .group-hover\:opacity-100{
+    opacity: 1;
+}
+
+.group:hover .group-hover\:visible{
+    visibility: visible;
+}
+
+.group:hover .group-hover\:translate-y-0{
+    transform: translateY(0);
+}
+
     </style>
 <style>
     body {
@@ -117,15 +130,97 @@
 <span class="text-xl font-bold tracking-tighter text-blue-900 dark:text-white uppercase font-h1">Kwara Innovation Lab</span>
 </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md" href="#about">Vision</a>
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md" href="courses.html">Courses</a>
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md" href="#network">Network</a>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold text-sm hover:opacity-80 transition-opacity duration-200 cursor-pointer active:scale-95 transition-transform">Join Now</button>
+<!-- Courses Dropdown -->
+<div class="relative group">
+    <a href="courses.html" class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md flex items-center gap-1 cursor-pointer">
+        Courses
+        <span class="material-symbols-outlined text-[18px]">expand_more</span>
+    </a>
+
+    <!-- Dropdown -->
+    <div class="absolute top-full left-0 mt-3 w-64 bg-white rounded-2xl shadow-2xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50 overflow-hidden">
+
+        <a href="courses.html?course=0"
+           class="block px-5 py-4 hover:bg-slate-50 transition-colors border-b border-slate-100">
+            <div class="font-semibold text-primary">WEB DEVELOPMENT / PROGRAMMING</div>
+            <div class="text-sm text-slate-500">Frontend & Backend</div>
+        </a>
+        <a href="courses.html?course=1"
+           class="block px-5 py-4 hover:bg-slate-50 transition-colors border-b border-slate-100">
+            <div class="font-semibold text-primary">UI/UX Design</div>
+            <div class="text-sm text-slate-500">Craft beautiful user interface & user experiences</div>
+        </a>
+
+        <a href="courses.html?course=2"
+           class="block px-5 py-4 hover:bg-slate-50 transition-colors border-b border-slate-100">
+            <div class="font-semibold text-primary">Data Analysis</div>
+            <div class="text-sm text-slate-500">Unlock insights from data</div>
+        </a>
+
+        <a href="courses.html?course=5"
+           class="block px-5 py-4 hover:bg-slate-50 transition-colors">
+            <div class="font-semibold text-primary">Robotics & AI</div>
+            <div class="text-sm text-slate-500">Build intelligent systems and robots</div>
+        </a>
+        <a href="courses.html?course=3"
+           class="block px-5 py-4 hover:bg-slate-50 transition-colors">
+            <div class="font-semibold text-primary">DATA SCIENCE / MACHINE LEARNING</div>
+            <div class="text-sm text-slate-500">Master data science and machine learning concepts</div>
+        </a>
+        <a href="courses.html?course=6"
+           class="block px-5 py-4 hover:bg-slate-50 transition-colors">
+            <div class="font-semibold text-primary">Video Animation</div>
+            <div class="text-sm text-slate-500">Create stunning visual stories</div>
+        </a>
+        <a href="courses.html?course=4"
+           class="block px-5 py-4 hover:bg-slate-50 transition-colors">
+            <div class="font-semibold text-primary">CYBERSECURITY & NETWORKING</div>
+            <div class="text-sm text-slate-500">Protect systems and networks from threats</div>
+        </a>
+    </div>
+</div>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md" href="graduates.html">Graduates</a>
+
+<!-- About Dropdown -->
+<div class="relative group">
+    <a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-800 transition-colors font-body-md flex items-center gap-1 cursor-pointer">
+        About Us
+        <span class="material-symbols-outlined text-[18px]">expand_more</span>
+    </a>
+
+    <!-- Dropdown -->
+    <div class="absolute top-full left-0 mt-3 w-56 bg-white rounded-2xl shadow-2xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50 overflow-hidden">
+
+        <a href="about.html#vision"
+           class="block px-5 py-4 hover:bg-slate-50 transition-colors border-b border-slate-100 font-medium text-primary">
+            Our Vision
+        </a>
+
+        <a href="about.html#network"
+           class="block px-5 py-4 hover:bg-slate-50 transition-colors border-b border-slate-100 font-medium text-primary">
+            Network
+        </a>
+
+        <a href="about.html#team"
+           class="block px-5 py-4 hover:bg-slate-50 transition-colors border-b border-slate-100 font-medium text-primary">
+            Team
+        </a>
+
+        <a href="about.html#gallery"
+           class="block px-5 py-4 hover:bg-slate-50 transition-colors font-medium text-primary">
+            Gallery
+        </a>
+
+    </div>
+</div>
+
+<a href="courses.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold text-sm hover:opacity-80 transition-opacity duration-200 cursor-pointer active:scale-95 transition-transform">Apply Now</a>
 </nav>
-<button class="md:hidden material-symbols-outlined" data-icon="menu">menu</button>
+
+<button class="lg:hidden material-symbols-outlined text-primary text-3xl p-2 hover:bg-slate-100 rounded-lg transition-colors flex items-center justify-center" data-icon="menu" style="cursor: pointer; z-index: 41; width: 48px; height: 48px;">menu</button>
 </div>
 </header>
-<!-- Mobile Menu Drawer -->
+<!-- Mobile Menu -->
 <div id="mobile-menu" class="fixed inset-0 z-40 hidden">
     <div id="menu-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
     <div class="absolute top-0 right-0 h-full w-72 bg-white shadow-2xl flex flex-col p-8 gap-6">
@@ -133,8 +228,8 @@
             <span class="text-lg font-bold text-blue-900 uppercase">Menu</span>
             <button id="close-menu" class="material-symbols-outlined text-slate-500">close</button>
         </div>
-        <a class="text-slate-700 font-medium text-lg hover:text-blue-800 transition-colors" href="#about">Vision</a>
-        <a class="text-slate-700 font-medium text-lg hover:text-blue-800 transition-colors" href="courses.html">Courses</a>
+        <a class="text-slate-700 font-medium text-lg hover:text-blue-800 transition-colors" href="index.html">Home</a>
+        <a class="text-slate-700 font-medium text-lg hover:text-blue-800 transition-colors" href="#programs">Courses</a>
         <a class="text-slate-700 font-medium text-lg hover:text-blue-800 transition-colors" href="#network">Network</a>
         <button class="mt-4 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:opacity-80 transition-opacity">Join Now</button>
     </div>
@@ -156,18 +251,15 @@
                     </p>
 <div class="flex flex-wrap gap-4 pt-base">
 <a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all flex items-center gap-2" href="courses.html">
-                            Explore Programs
+                            Join the next cohort
                             <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </a>
-<a class="border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary/5 transition-all" href="#cta">
-                            Partner With Us
-                        </a>
 </div>
 </div>
 <div class="relative hidden md:block">
 <div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl"></div>
 <div class="relative bg-white p-4 rounded-[2rem] shadow-2xl shadow-primary-container/10 border border-white/50 rotate-2">
-<img class="rounded-[1.5rem] w-full h-[500px] object-cover" data-alt="A professional and energetic photograph of diverse young African innovators collaborating in a bright, modern technology lab in Kwara. The space is filled with high-end computer equipment, clean white surfaces, and warm natural light filtering through large windows. The overall aesthetic is institutional yet agile, mirroring the corporate-tech style of global hubs like MIT. The color palette emphasizes clean whites, deep blues, and subtle gold accents, creating a mood of intellectual prestige and future-focused ambition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu1rHm40jV0OO9Dwfb6KKw_NdXkjORtppLBh-VhtDGhkgWkfWW6L_1FSGEI9eh4-N4aBFu9eFRFxeA_FJICi2qn9luhxs7rmEgkBE-4dNorOkHRyCFWoYmP7OEYVY5a6qXB0sscOmOdnStBWjgW7R8ToYLPqa_b_pBV0cHjfRTcS1auyBl5dY_JJoms6wGtL2dQ-6MgDGgxyWYrYNMAiCmlOXBfZIHVBgu3Ugwxrgn0VQqh8KUQ1UvKAgCnS_MbWsAx5uz_nAl_j0"/>
+<img class="rounded-[1.5rem] w-full h-[500px] object-cover" data-alt="" src="/Gallery/WhatsApp Image 2026-05-14 at 12.03.29 PM.jpeg"/>
 </div>
 </div>
 </div>
@@ -175,20 +267,55 @@
 <!-- About Section -->
 <section class="py-xl px-6 bg-white" id="about">
 <div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-lg items-center">
-<div class="md:col-span-2">
-<h2 class="font-h2 text-h2 text-primary mb-md">Bridging the Global Digital Gap</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-3xl">
-                            The Kwara Innovation Lab is a strategic catalyst designed to democratize access to elite technology education. Our mission is to transform Kwara into a premier African innovation hub by closing the digital divide and creating institutional pathways for talent to meet global demand. We don't just train; we integrate excellence into the grassroots.
-                        </p>
+<div class="text-center mb-lg">
+  <h2 class="font-h2 text-h2 text-primary">Community Tech Skills Training</h2>
+  <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mt-base">
+    Bringing practical digital skills to grassroots communities through hands-on learning and mentorship designed to transform lives from the ground up.
+  </p>
 </div>
-<div class="bg-surface-container p-md rounded-xl border border-outline-variant/30">
-<div class="flex items-center gap-3 mb-sm">
-<span class="material-symbols-outlined text-secondary text-3xl" data-icon="auto_awesome">auto_awesome</span>
-<span class="font-h3 text-primary">Our Vision</span>
-</div>
-<p class="font-body-md text-on-surface-variant">To establish Africa’s most sustainable and impactful innovation ecosystem that fuels economic growth through technology-led education.</p>
-</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+
+  <div class="bg-white border border-surface-variant rounded-lg p-lg hover:shadow-md transition-all">
+    <div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-md">
+      <span class="material-symbols-outlined text-primary-container text-2xl" data-icon="laptop">laptop</span>
+    </div>
+    <h3 class="font-h3 text-h3 text-on-surface mb-sm">Online Tech Bootcamps</h3>
+    <p class="font-body-md text-on-surface-variant leading-relaxed">
+      Flexible, community-first virtual programs built for everyday people — no prior tech background needed. Learn at your pace, on your terms.
+    </p>
+  </div>
+
+  <div class="bg-white border border-surface-variant rounded-lg p-lg hover:shadow-md transition-all">
+    <div class="w-12 h-12 rounded-lg bg-tertiary-container/20 flex items-center justify-center mb-md">
+      <span class="material-symbols-outlined text-tertiary text-2xl" data-icon="groups">groups</span>
+    </div>
+    <h3 class="font-h3 text-h3 text-on-surface mb-sm">1:1 Community Mentoring</h3>
+    <p class="font-body-md text-on-surface-variant leading-relaxed">
+      Get matched with a tech mentor from your own community who understands your journey. Personalized support, real-world guidance.
+    </p>
+  </div>
+
+  <div class="bg-white border border-surface-variant rounded-lg p-lg hover:shadow-md transition-all">
+    <div class="w-12 h-12 rounded-lg bg-secondary-container/30 flex items-center justify-center mb-md">
+      <span class="material-symbols-outlined text-secondary text-2xl" data-icon="location_on">location_on</span>
+    </div>
+    <h3 class="font-h3 text-h3 text-on-surface mb-sm">In-Person Local Training</h3>
+    <p class="font-body-md text-on-surface-variant leading-relaxed">
+      Hands-on training delivered right in your neighbourhood. We come to the grassroots — because access to tech shouldn't depend on where you live.
+    </p>
+  </div>
+
+  <div class="bg-white border border-surface-variant rounded-lg p-lg hover:shadow-md transition-all">
+    <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-md">
+      <span class="material-symbols-outlined text-primary text-2xl" data-icon="verified">verified</span>
+    </div>
+    <h3 class="font-h3 text-h3 text-on-surface mb-sm">Skills & Career Pathways</h3>
+    <p class="font-body-md text-on-surface-variant leading-relaxed">
+      From zero to job-ready. Our structured pathways help community members build certifiable digital skills and step into new career opportunities.
+    </p>
+  </div>
+
 </div>
 </div>
 </section>
@@ -252,27 +379,6 @@
 </div>
 </section>
 <!-- Impact Statistics -->
-<section class="py-xl bg-primary text-on-primary">
-<div class="max-w-7xl mx-auto px-6">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-lg text-center">
-<div>
-<div class="text-[64px] font-black text-secondary leading-none mb-2">500+</div>
-<div class="font-label-caps uppercase tracking-widest text-primary-fixed-dim">Youths Trained</div>
-</div>
-<div>
-<div class="text-[64px] font-black text-secondary leading-none mb-2">7+</div>
-<div class="font-label-caps uppercase tracking-widest text-primary-fixed-dim">Global Partnerships</div>
-</div>
-<div>
-
-</div>
-<div>
-<div class="text-[64px] font-black text-secondary leading-none mb-2">12+</div>
-<div class="font-label-caps uppercase tracking-widest text-primary-fixed-dim">African Nations</div>
-</div>
-</div>
-</div>
-</section>
 <!-- Network / Map -->
 <section class="py-xl px-6 bg-white overflow-hidden" id="network">
 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
@@ -346,44 +452,208 @@
 </section>
 <!-- Testimonials -->
 <section class="py-xl px-6 bg-white">
-<div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
-<div>
-<span class="font-label-caps text-secondary">Success Stories</span>
-<h2 class="font-h2 text-h2 text-primary mt-base">Voices from the Innovation Lab</h2>
-<div class="mt-lg p-lg bg-surface border-l-4 border-secondary italic text-body-lg text-primary relative">
-<span class="material-symbols-outlined absolute -top-4 -left-2 text-primary/10 text-[64px]" data-icon="format_quote">format_quote</span>
-                            "The Kwara Innovation Lab provided me with more than just coding skills; it gave me the network and professional polish required to secure a remote role with a Silicon Valley firm while living in Ilorin."
-                            <div class="mt-md not-italic flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
-<img data-alt="A professional headshot of a confident young African woman tech professional, smiling softly against a minimalist, bright office background. She has a look of intellectual curiosity and success. The lighting is high-key and soft, fitting a premium light-theme corporate aesthetic. Her attire is professional yet modern, symbolizing the new generation of African tech talent being built by institutional innovation hubs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKQqriBjPiaAHxjcE6eyHFqtO11sAAJgAD-bktkpTBiYivAGDHeFYNCBUDiJuya7kogjowDOOisSOYARu-petqzuf4LD3pMOmOH2EFV0JK0Q233-hiHjEWo3GROw7Vl6jwf0k0OUczxMG5U8Znd5ezLCx1FroyBnVq3gwo29cl-U_71lmUW18abYmp19IGW7Z4bCxlk6XP1tODxRGB3hQyBrnH-mfs7lb_m_2he3X87UvP-9FmnM3ggjvSVcxYMJn6pPMGOs1LG-Q"/>
-</div>
-<div>
-<div class="font-bold text-primary">Aisha Bello</div>
-<div class="text-sm text-on-surface-variant">Software Engineer, Batch 22'</div>
-</div>
-</div>
-</div>
-</div>
+  <div class="max-w-7xl mx-auto">
 
-</div>
-</div>
+    <div class="text-center mb-lg">
+      <span class="font-label-caps text-secondary">Success Stories</span>
+      <h2 class="font-h2 text-h2 text-primary mt-base">Voices from the Innovation Lab</h2>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-lg items-stretch">
+
+      <!-- Story 1 -->
+      <div class="flex-1 p-lg bg-surface border-l-4 border-secondary italic text-body-lg text-primary relative">
+        <span class="material-symbols-outlined absolute -top-4 -left-2 text-primary/10 text-[64px]" data-icon="format_quote">format_quote</span>
+        "My experience at Kwara Innovation Lab has been really great. The teachings have been very impactful, and I'm learning a lot more about Data Analysis and how it can be applied across different sectors."
+        <div class="mt-md not-italic flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+            <img src="/Gallery/ Image 2026-05-14 at 11.32.31 AM.jpeg" alt="Ajayi Oluwaseyifunmi Favour" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="font-bold text-primary">Ajayi Oluwaseyifunmi Favour</div>
+            <div class="text-sm text-on-surface-variant">Data Analyst, Batch 26'</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 2 -->
+      <div class="flex-1 p-lg bg-surface border-l-4 border-secondary italic text-body-lg text-primary relative">
+        <span class="material-symbols-outlined absolute -top-4 -left-2 text-primary/10 text-[64px]" data-icon="format_quote">format_quote</span>
+        "Joining the Innovation Lab was the best decision I made this year. The hands-on projects and mentorship gave me the confidence to build real-world solutions. I never imagined I'd be writing code this soon."
+        <div class="mt-md not-italic flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+            <img src="/Gallery/student2.jpeg" alt="Bello Fatimah Adaeze" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="font-bold text-primary">Bello Fatimah Adaeze</div>
+            <div class="text-sm text-on-surface-variant">Web Developer, Batch 26'</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story 3 -->
+      <div class="flex-1 p-lg bg-surface border-l-4 border-secondary italic text-body-lg text-primary relative">
+        <span class="material-symbols-outlined absolute -top-4 -left-2 text-primary/10 text-[64px]" data-icon="format_quote">format_quote</span>
+        "The curriculum here is structured but practical. I came in with zero knowledge of UI/UX and now I'm designing interfaces for real clients. The instructors are patient, knowledgeable, and genuinely invested in your growth."
+        <div class="mt-md not-italic flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+            <img src="/Gallery/adam.jpeg" alt=" Abdulazeez Adam. A" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <div class="font-bold text-primary"> Abdulazeez Adam. A</div>
+            <div class="text-sm text-on-surface-variant">Full Stack Development & Robotics, Batch 26'</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 <!-- CTA Section -->
 <section class="py-xl px-6 bg-secondary-container" id="cta">
-<div class="max-w-5xl mx-auto text-center space-y-md">
-<h2 class="font-h1 text-primary">Join us in building Africa’s largest innovation talent pipeline</h2>
-<p class="text-on-secondary-container font-body-lg max-w-2xl mx-auto">
-                    Whether you're an aspiring innovator or a strategic partner, there's a seat for you at the Kwara Innovation Lab.
-                </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center pt-base">
-<a href="https://wa.me/2348066406464?text=Hello%20I%20want%20to%20learn%20more%20about%20your%20services" class="bg-primary text-on-primary px-10 py-5 rounded-full font-bold shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-all">
-<span class="material-symbols-outlined" data-icon="forum">forum</span>
-                        Chat with Us on WhatsApp
-                    </a>
+<div class="max-w-7xl mx-auto">
 
-</div>
-</div>
+    <!-- Section Header -->
+    <div class="text-center mb-lg">
+      <h2 class="font-h2 text-h2 text-primary">Get in Touch</h2>
+      <p class="text-body-lg text-secondary mt-base max-w-xl mx-auto">
+        Have questions? Our team is ready to assist you. Get in touch today, and let's work together.
+      </p>
+    </div>
+
+    <!-- Card Container -->
+    <div class="flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-md max-w-5xl mx-auto">
+
+      <!-- Left Panel -->
+      <div class="bg-[#1a1a6e] text-white p-xl flex flex-col gap-lg w-full md:w-2/5">
+        <h3 class="text-2xl font-bold">Contact Us</h3>
+
+        <!-- Email -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-white text-xl">mail</span>
+          </div>
+          <div>
+            <div class="text-sm text-white/60">Email us</div>
+            <div class="text-white font-medium">tech2disn@gmail.com</div>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-white text-xl">call</span>
+          </div>
+          <div>
+            <div class="text-sm text-white/60">Phone number</div>
+            <div class="text-white font-medium">+2348066406464</div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-white/20 pt-lg">
+          <p class="text-sm text-white/60 mb-md">— Connect with us:</p>
+          <div class="flex gap-3">
+            <a href="mailto:tech2disn@gmail.com" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                    <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+            </a>
+            <a  href="https://www.tiktok.com/@tech2grassroots.a?_r=1&_t=ZS-95XWSOCz8Cr" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/tech2grassroot?mibextid=ZbWKwL" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                    <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+                </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/tech2grassrootsafrica/" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm6.5 0h3.84v2.14h.05c.53-1 1.84-2.14 3.79-2.14 4.05 0 4.8 2.66 4.8 6.12V24h-4v-8.53c0-2.03-.04-4.65-2.84-4.65-2.84 0-3.28 2.22-3.28 4.51V24H7V8.5z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/tech2grassroots?igsh=MWF1YTA5Y254cnR1Ng==" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+            </a>
+            <!-- X / Twitter -->
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel: Form -->
+      <div class="bg-white p-xl w-full md:w-3/5">
+        <form class="flex flex-col gap-md">
+
+          <!-- Row 1: First & Last Name -->
+          <div class="flex gap-md">
+            <div class="flex-1 flex flex-col gap-1">
+              <label class="text-sm font-medium text-primary">First Name</label>
+              <input type="text" placeholder="First Name"
+                class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" />
+            </div>
+            <div class="flex-1 flex flex-col gap-1">
+              <label class="text-sm font-medium text-primary">Last Name</label>
+              <input type="text" placeholder="Last Name"
+                class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" />
+            </div>
+          </div>
+
+          <!-- Row 2: Email & Phone -->
+          <div class="flex gap-md">
+            <div class="flex-1 flex flex-col gap-1">
+              <label class="text-sm font-medium text-primary">Email</label>
+              <input type="email" placeholder="Email Address"
+                class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" />
+            </div>
+            <div class="flex-1 flex flex-col gap-1">
+              <label class="text-sm font-medium text-primary">Phone Number</label>
+              <input type="tel" placeholder="Your Phone Number"
+                class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" />
+            </div>
+          </div>
+
+          <!-- Subject -->
+          <div class="flex flex-col gap-1">
+            <label class="text-sm font-medium text-primary">Subject</label>
+            <select class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full appearance-none bg-white">
+              <option value="" disabled selected>Select a subject</option>
+              <option>General Enquiry</option>
+              <option>Bootcamp Registration</option>
+              <option>Partnership</option>
+              <option>Mentorship</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div class="flex flex-col gap-1">
+            <label class="text-sm font-medium text-primary">Message</label>
+            <textarea rows="5" placeholder="Your Message"
+              class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full resize-none"></textarea>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit"
+            class="bg-[#1a1a6e] hover:bg-[#13136b] text-white font-medium py-3 px-8 rounded-lg transition-colors self-end">
+            Send Message
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
 </section>
 </main>
 <!-- Footer -->
@@ -392,36 +662,14 @@
 <div class="col-span-1 md:col-span-1">
 <div class="text-2xl font-black text-white mb-4">Kwara Innovation Lab</div>
 <p class="text-slate-300 font-sans text-sm leading-relaxed mb-6">Empowering African Excellence through institutional trust and forward-thinking innovation.</p>
-<div class="flex gap-4">
-
-<a id="social-x" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="X (Twitter)">
-<i class="fab fa-x text-white"></i>
-</a>
-<a id="social-linkedin" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="LinkedIn">
-<i class="fab fa-linkedin text-white"></i>
-</a>
-<a id="social-instagram" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="Instagram">
-<i class="fab fa-instagram text-white"></i>
-</a>
-<a id="social-tiktok" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="TikTok">
-<i class="fab fa-tiktok text-white"></i>
-</a>
-<a id="social-facebook" href="#" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" title="Facebook">
-<i class="fab fa-facebook text-white"></i>
-</a>
-
-<a href="mailto:tech2disn@gmail.com" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all" data-icon="mail" >
-    <i class="fab fa-envelope text-white"></i>
-</a>
-</div>
 </div>
 <div>
 <h5 class="font-bold mb-6 text-yellow-500 font-label-caps uppercase text-xs">Explore</h5>
 <ul class="space-y-4">
-<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Vision</a></li>
-<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Services</a></li>
-<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Network</a></li>
-<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block text-yellow-500 font-semibold" href="#">Apply</a></li>
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="about.html#vision">Vision</a></li>
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="about.html#services">Services</a></li>
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="about.html#network">Network</a></li>
+<li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block text-yellow-500 font-semibold" href="courses.html">Apply</a></li>
 </ul>
 </div>
 <div>
@@ -456,46 +704,48 @@
         </div>
 </footer>
 <script>
-    const socialLinks = {
-        x: 'https://x.com/tech2disn45026',
-        linkedin: 'https://www.linkedin.com/company/tech2grassrootsafrica/',
-        instagram: 'https://www.instagram.com/tech2grassroots?igsh=MWF1YTA5Y254cnR1Ng==',
-        tiktok: 'https://www.tiktok.com/@tech2grassroots.a?_r=1&_t=ZS-95XWSOCz8Cr',
-        facebook: 'https://www.facebook.com/tech2grassroot?mibextid=ZbWKwL'
-    };
 
     // Initialize social media links
-    function initializeSocialLinks() {
-        document.getElementById('social-x').href = socialLinks.x;
-        document.getElementById('social-linkedin').href = socialLinks.linkedin;
-        document.getElementById('social-instagram').href = socialLinks.instagram;
-        document.getElementById('social-tiktok').href = socialLinks.tiktok;
-        document.getElementById('social-facebook').href = socialLinks.facebook;
-    }
+    
 
-    // Call the function to initialize social media links
-    initializeSocialLinks();
+    // Mobile menu
+ document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerBtn = document.querySelector('button[data-icon="menu"]');
+        const closeMenuBtn = document.getElementById('close-menu');
+        const menuBackdrop = document.getElementById('menu-backdrop');
 
+        if (!hamburgerBtn) {
+            console.error('Hamburger button not found!');
+            return;
+        }
 
-    const mobileMenu = document.getElementById('mobile-menu');
+        function openMenu() {
+            if (mobileMenu) {
+                mobileMenu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
 
-    function openMenu() {
-        mobileMenu.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-    }
+        function closeMenu() {
+            if (mobileMenu) {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
 
-    function closeMenu() {
-        mobileMenu.classList.add('hidden');
-        document.body.style.overflow = '';
-    }
+        hamburgerBtn.addEventListener('click', openMenu);
+        if (closeMenuBtn) {
+            closeMenuBtn.addEventListener('click', closeMenu);
+        }
+        if (menuBackdrop) {
+            menuBackdrop.addEventListener('click', closeMenu);
+        }
 
-    document.querySelector('button.md\\:hidden').addEventListener('click', openMenu);
-    document.getElementById('close-menu').addEventListener('click', closeMenu);
-    document.getElementById('menu-backdrop').addEventListener('click', closeMenu);
-
-    // Close menu when a nav link is clicked
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', closeMenu);
+        // Close menu when a nav link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
     });
 </script>
 </body></html>

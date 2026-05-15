@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Kwara Innovation Lab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface": "#fbf9f8",
+          "surface-bright": "#fbf9f8",
+          "on-tertiary-container": "#9a9c9d",
+          "on-secondary-fixed": "#241a00",
+          "tertiary-fixed-dim": "#c5c7c8",
+          "on-secondary-fixed-variant": "#574500",
+          "on-background": "#1b1c1c",
+          "secondary-fixed": "#ffe088",
+          "on-tertiary-fixed-variant": "#454748",
+          "on-secondary": "#ffffff",
+          "surface-dim": "#dbd9d9",
+          "surface-container-lowest": "#ffffff",
+          "surface-variant": "#e4e2e2",
+          "primary-fixed-dim": "#a7c8ff",
+          "on-error": "#ffffff",
+          "tertiary-container": "#313435",
+          "secondary-container": "#fed65b",
+          "surface-container-highest": "#e4e2e2",
+          "inverse-primary": "#a7c8ff",
+          "primary": "#001e40",
+          "surface-container": "#efeded",
+          "primary-container": "#003366",
+          "outline-variant": "#c3c6d1",
+          "on-error-container": "#93000a",
+          "on-primary-fixed": "#001b3c",
+          "surface-container-high": "#eae8e7",
+          "primary-fixed": "#d5e3ff",
+          "background": "#fbf9f8",
+          "inverse-on-surface": "#f2f0f0",
+          "on-primary-fixed-variant": "#1f477b",
+          "tertiary": "#1c1f20",
+          "on-tertiary": "#ffffff",
+          "secondary-fixed-dim": "#e9c349",
+          "on-secondary-container": "#745c00",
+          "on-primary": "#ffffff",
+          "on-surface": "#1b1c1c",
+          "error-container": "#ffdad6",
+          "secondary": "#735c00",
+          "on-surface-variant": "#43474f",
+          "tertiary-fixed": "#e1e3e4",
+          "inverse-surface": "#303030",
+          "surface-container-low": "#f5f3f3",
+          "error": "#ba1a1a",
+          "surface-tint": "#3a5f94",
+          "on-primary-container": "#799dd6",
+          "outline": "#737780",
+          "on-tertiary-fixed": "#191c1d"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "xs": "4px",
+          "container-max": "1280px",
+          "xl": "80px",
+          "sm": "12px",
+          "lg": "48px",
+          "md": "24px",
+          "gutter": "24px",
+          "base": "8px"
+        },
+        "fontFamily": {
+          "h3": ["Inter"],
+          "body-md": ["Inter"],
+          "body-lg": ["Inter"],
+          "h1": ["Inter"],
+          "h2": ["Inter"],
+          "label-caps": ["Inter"]
+        },
+        "fontSize": {
+          "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+          "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+          "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+          "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "h2": ["36px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "700"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .hero-gradient { background: radial-gradient(circle at top right, #d5e3ff 0%, #fbf9f8 60%); }
+  .gallery-item { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .gallery-item:hover { transform: scale(1.03); box-shadow: 0 20px 40px rgba(0,30,64,0.15); }
+  .team-card:hover .team-overlay { opacity: 1; }
+  .team-overlay { opacity: 0; transition: opacity 0.3s ease; }
+  .stat-number { font-variant-numeric: tabular-nums; }
+  .slideshow-container { position: relative; width: 100%; height: 100%; }
+  .slide { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+  .fade { animation: none; }
+  .slide.active { opacity: 1 !important; }
+  @keyframes fadeEffect { from { opacity: 0; } to { opacity: 1; } }
+  .dot-active { background-color: white !important; }
+</style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm shadow-blue-900/5">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 cursor-pointer active:scale-95 transition-transform">
+      <img src="IMG-20260414-WA0042_024908-removebg-preview.png" class="h-11 w-11 object-contain drop-shadow-sm" alt="Kwara Innovation Lab Logo">
+      <span class="text-xl font-bold tracking-tighter text-blue-900 uppercase font-h1">Kwara Innovation Lab</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-slate-600 font-medium hover:text-blue-800 transition-colors" href="index.html#about">Courses</a>
+      <a class="text-slate-600 font-medium hover:text-blue-800 transition-colors" href="graduates.html">Graduates</a>
+      <a class="text-blue-900 font-semibold border-b-2 border-secondary" href="about.html">About us</a>
+      <a href="courses.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-semibold text-sm hover:opacity-80 transition-opacity">Apply Now</a>
+    </nav>
+    <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined">menu</button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="fixed inset-0 z-40 hidden">
+  <div id="menu-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+  <div class="absolute top-0 right-0 h-full w-72 bg-white shadow-2xl flex flex-col p-8 gap-6">
+    <div class="flex justify-between items-center mb-4">
+      <span class="text-lg font-bold text-blue-900 uppercase">Menu</span>
+      <button id="close-menu" class="material-symbols-outlined text-slate-500">close</button>
+    </div>
+    <a class="text-slate-700 font-medium text-lg hover:text-blue-800" href="index.html#about">Courses</a>
+    <a class="text-slate-700 font-medium text-lg hover:text-blue-800" href="graduates.html">Graduates</a>
+    <a class="text-slate-700 font-medium text-lg hover:text-blue-800" href="about.html">About us</a>
+    <a href="courses.html" class="mt-4 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:opacity-80">Apply Now</a>
+  </div>
+</div>
+
+<main class="pt-20">
+
+  <!-- Hero / Page Header -->
+  <section class="hero-gradient py-xl px-6">
+    <div class="max-w-7xl mx-auto text-center space-y-md">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-caps uppercase text-[10px]">
+        <span class="material-symbols-outlined text-sm">info</span>
+        About Us
+      </div>
+      <h1 class="font-h1 text-h1 text-primary max-w-3xl mx-auto leading-[1.1]">
+        We Are <span class="text-primary-container">Tech2Grassroots</span> Africa
+      </h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+        A movement committed to closing the digital divide one community, one skill, one innovator at a time. From Ilorin to the world.
+      </p>
+      <!-- Stats Bar -->
+      <div class="flex flex-wrap justify-center gap-md mt-lg pt-lg border-t border-primary/10">
+        <div class="text-center px-lg">
+          <div class="stat-number text-4xl font-black text-primary">500+</div>
+          <div class="text-sm text-on-surface-variant mt-xs">Graduates Trained</div>
+        </div>
+        <div class="w-px bg-primary/10 hidden md:block"></div>
+        <div class="text-center px-lg">
+          <div class="stat-number text-4xl font-black text-primary">26</div>
+          <div class="text-sm text-on-surface-variant mt-xs">Batches Completed</div>
+        </div>
+        <div class="w-px bg-primary/10 hidden md:block"></div>
+        <div class="text-center px-lg">
+          <div class="stat-number text-4xl font-black text-primary">3</div>
+          <div class="text-sm text-on-surface-variant mt-xs">Active Hubs</div>
+        </div>
+        <div class="w-px bg-primary/10 hidden md:block"></div>
+        <div class="text-center px-lg">
+          <div class="stat-number text-4xl font-black text-primary">10+</div>
+          <div class="text-sm text-on-surface-variant mt-xs">Industry Partners</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Section -->
+  <section class="py-xl px-6 bg-white" id="vision">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+        <div class="space-y-md">
+          <span class="font-label-caps text-secondary uppercase tracking-[0.2em]">Our Vision</span>
+          <h2 class="font-h2 text-h2 text-primary">A Digital Africa, Built from the Ground Up</h2>
+          <p class="font-body-lg text-on-surface-variant leading-relaxed">
+            We envision an Africa where every young person regardless of geography, background, or economic status has access to world-class technology education and the opportunity to build a meaningful career in tech.
+          </p>
+          <p class="font-body-md text-on-surface-variant leading-relaxed">
+            Kwara Innovation Lab is the flagship implementation of that vision. We believe that grassroots communities are not obstacles to innovation they are its greatest untapped source.
+          </p>
+          <div class="grid grid-cols-1 gap-sm pt-base">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center shrink-0 mt-1">
+                <span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+              </div>
+              <div>
+                <div class="font-semibold text-on-surface">Our Mission</div>
+                <p class="text-sm text-on-surface-variant mt-xs">To bridge the digital divide by equipping individuals, schools, educators, startups, and organizations with practical digital skills, innovative solutions, and technology-driven opportunities that foster sustainable growth and global competitiveness.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 mt-1">
+                <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">target</span>
+              </div>
+              <div>
+                <div class="font-semibold text-on-surface">Our Goal</div>
+                <p class="text-sm text-on-surface-variant mt-xs">Train 10,000 grassroots tech talents by 2028, establishing hubs in every Nigerian state and expanding across 5 African countries.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-tertiary-container/20 flex items-center justify-center shrink-0 mt-1">
+                <span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">favorite</span>
+              </div>
+              <div>
+                <div class="font-semibold text-on-surface">Our Values</div>
+                <p class="text-sm text-on-surface-variant mt-xs">Inclusion, excellence, community ownership, practical learning, and measurable impact — these are not slogans, they are how we operate every single day.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision Graphic / Quote Block -->
+        <div class="relative">
+          <div class="absolute -top-8 -right-8 w-48 h-48 bg-secondary-container/30 rounded-full blur-3xl"></div>
+          <div class="relative bg-primary rounded-2xl p-lg text-white space-y-md overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-8 translate-x-8"></div>
+            <span class="material-symbols-outlined text-secondary-container text-[80px] leading-none block -mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+            <p class="font-body-lg text-white/90 italic leading-relaxed relative z-10">
+              "Technology is the great equaliser of our time. Our job is to make sure that equalisation reaches every street, every community, every child in Africa."
+            </p>
+            <div class="flex items-center gap-3 pt-sm border-t border-white/10">
+              <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary font-bold text-sm shrink-0">KIL</div>
+              <div>
+                <div class="font-semibold text-white text-sm">Kwara Innovation Lab</div>
+                <div class="text-white/50 text-xs">Founding Principle</div>
+              </div>
+            </div>
+          </div>
+          <!-- Core pillars -->
+          <div class="grid grid-cols-3 gap-sm mt-md">
+            <div class="bg-surface-container-low rounded-lg p-sm text-center">
+              <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">school</span>
+              <div class="text-xs font-semibold text-primary mt-xs">Education</div>
+            </div>
+            <div class="bg-surface-container-low rounded-lg p-sm text-center">
+              <span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">handshake</span>
+              <div class="text-xs font-semibold text-primary mt-xs">Community</div>
+            </div>
+            <div class="bg-surface-container-low rounded-lg p-sm text-center">
+              <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+              <div class="text-xs font-semibold text-primary mt-xs">Innovation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Network Section -->
+  <section class="py-xl px-6 bg-surface-bright" id="network">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-lg">
+        <span class="font-label-caps text-secondary uppercase tracking-[0.2em]">Our Network</span>
+        <h2 class="font-h2 text-h2 text-primary mt-base">Expanding Across Nigeria & Africa</h2>
+        <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mt-sm">
+          What started as a single lab in Ilorin is now a growing constellation of connected innovation hubs, each one bringing the same quality training to a new community.
+        </p>
+      </div>
+
+      <!-- Hubs Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-md mb-lg">
+        <!-- Hub 1 -->
+        <div class="bg-primary text-white rounded-xl p-lg relative overflow-hidden shadow-xl shadow-primary/20">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -translate-y-6 translate-x-6"></div>
+          <div class="relative z-10">
+            <div class="flex items-center gap-2 mb-md">
+              <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span class="text-xs text-white/60 font-label-caps uppercase">Central Command</span>
+            </div>
+            <h3 class="text-xl font-bold mb-sm">Ilorin Hub</h3>
+            <p class="text-sm text-white/70 leading-relaxed mb-md">Our flagship facility at the Kwara State Library Complex. Home base for curriculum development, enterprise training, and innovation incubation.</p>
+            <div class="flex items-center gap-2 text-sm text-white/60">
+              <span class="material-symbols-outlined text-sm">location_on</span>
+              Kwara State Library Complex, Ilorin
+            </div>
+          </div>
+        </div>
+
+        <!-- Hub 2 -->
+        <div class="bg-white border border-surface-variant rounded-xl p-lg hover:shadow-lg transition-all">
+          <div class="flex items-center gap-2 mb-md">
+            <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+            <span class="text-xs text-on-surface-variant font-label-caps uppercase">Active Hub</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-sm">Lagos Hub</h3>
+          <p class="text-sm text-on-surface-variant leading-relaxed mb-md">Bridging Kwara talent to Lagos' thriving tech ecosystem. Focused on enterprise placements and startup incubation for graduates.</p>
+          <div class="flex items-center gap-2 text-sm text-on-surface-variant">
+            <span class="material-symbols-outlined text-sm text-primary">location_on</span>
+            Lagos State, Nigeria
+          </div>
+        </div>
+
+        <!-- Hub 3 -->
+        <div class="bg-white border border-surface-variant rounded-xl p-lg hover:shadow-lg transition-all">
+          <div class="flex items-center gap-2 mb-md">
+            <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+            <span class="text-xs text-on-surface-variant font-label-caps uppercase">Active Hub</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary mb-sm">Osun Hub</h3>
+          <p class="text-sm text-on-surface-variant leading-relaxed mb-md">Serving Oshogbo and surrounding communities with hands-on bootcamps and digital skills training for youth and young professionals.</p>
+          <div class="flex items-center gap-2 text-sm text-on-surface-variant">
+            <span class="material-symbols-outlined text-sm text-primary">location_on</span>
+            Osun State, Nigeria
+          </div>
+        </div>
+      </div>
+
+      <!-- Expansion Roadmap -->
+      <div class="bg-white border border-surface-variant rounded-xl p-lg">
+        <h3 class="font-h3 text-h3 text-primary mb-md">Expansion Roadmap</h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-md">
+          <div class="flex flex-col gap-sm">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">✓</div>
+              <span class="font-semibold text-on-surface text-sm">Phase 1 — 2023</span>
+            </div>
+            <p class="text-sm text-on-surface-variant pl-10">Ilorin flagship lab launched. First 5 batches trained.</p>
+          </div>
+          <div class="flex flex-col gap-sm">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">✓</div>
+              <span class="font-semibold text-on-surface text-sm">Phase 2 — 2024</span>
+            </div>
+            <p class="text-sm text-on-surface-variant pl-10">Lagos and Osun hubs opened. Enterprise partnerships established.</p>
+          </div>
+          <div class="flex flex-col gap-sm">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 bg-secondary-container rounded-full flex items-center justify-center text-secondary text-xs font-bold shrink-0">→</div>
+              <span class="font-semibold text-on-surface text-sm">Phase 3 — 2026</span>
+            </div>
+            <p class="text-sm text-on-surface-variant pl-10">5 new state hubs. First international expansion into Ghana & Kenya.</p>
+          </div>
+          <div class="flex flex-col gap-sm">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 bg-surface-container rounded-full flex items-center justify-center text-on-surface-variant text-xs font-bold shrink-0">◦</div>
+              <span class="font-semibold text-on-surface text-sm">Phase 4 — 2028</span>
+            </div>
+            <p class="text-sm text-on-surface-variant pl-10">Pan-African network of 20+ hubs. 10,000 graduates milestone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-xl px-6 bg-white" id="team">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-lg">
+        <span class="font-label-caps text-secondary uppercase tracking-[0.2em]">Our People</span>
+        <h2 class="font-h2 text-h2 text-primary mt-base">The Team Behind the Mission</h2>
+        <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mt-sm">
+          Passionate educators, technologists, and community builders united by a single purpose — giving Africa's grassroots the tools to lead the digital future.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+
+        <!-- Team Member 1 -->
+        <div class="team-card group relative bg-surface-container-low rounded-xl overflow-hidden cursor-pointer">
+          <div class="w-full h-64 bg-gradient-to-br from-primary/10 to-primary/30 flex items-center justify-center relative overflow-hidden">
+            <img src="mr ayobami.jpeg" alt="Founder" class="w-full h-full object-cover object-top" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="hidden w-full h-full items-center justify-center bg-gradient-to-br from-primary/10 to-primary/30">
+              <span class="material-symbols-outlined text-primary/30 text-[80px]" style="font-variation-settings: 'FILL' 1;">person</span>
+            </div>
+            <div class="team-overlay absolute inset-0 bg-primary/80 flex items-center justify-center p-md">
+              <p class="text-white text-sm text-center leading-relaxed">Pioneering tech education at the grassroots with over 8 years of experience in community development and digital training.</p>
+            </div>
+          </div>
+          <div class="p-md">
+            <div class="font-bold text-primary">MR Ayobami Oludele</div>
+            <div class="text-sm text-secondary font-medium">Founder & Executive Director</div>
+            <div class="flex gap-2 mt-sm">
+              <a href="https://www.linkedin.com/company/tech2grassrootsafrica/" class="text-on-surface-variant hover:text-primary transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm6.5 0h3.84v2.14h.05c.53-1 1.84-2.14 3.79-2.14 4.05 0 4.8 2.66 4.8 6.12V24h-4v-8.53c0-2.03-.04-4.65-2.84-4.65-2.84 0-3.28 2.22-3.28 4.51V24H7V8.5z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-card group relative bg-surface-container-low rounded-xl overflow-hidden cursor-pointer">
+          <div class="w-full h-64 relative overflow-hidden">
+            <img src="team2.jpeg" alt="Lead Instructor" class="w-full h-full object-cover object-top" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="hidden w-full h-full items-center justify-center bg-gradient-to-br from-secondary/10 to-secondary/30">
+              <span class="material-symbols-outlined text-secondary/30 text-[80px]" style="font-variation-settings: 'FILL' 1;">person</span>
+            </div>
+            <div class="team-overlay absolute inset-0 bg-primary/80 flex items-center justify-center p-md">
+              <p class="text-white text-sm text-center leading-relaxed">Award-winning data science educator who has trained over 300 students in analytics, machine learning, and business intelligence.</p>
+            </div>
+          </div>
+          <div class="p-md">
+            <div class="font-bold text-primary"></div>
+            <div class="text-sm text-secondary font-medium"></div>
+            <div class="flex gap-2 mt-sm">
+              <a href="https://www.linkedin.com/company/tech2grassrootsafrica/" class="text-on-surface-variant hover:text-primary transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm6.5 0h3.84v2.14h.05c.53-1 1.84-2.14 3.79-2.14 4.05 0 4.8 2.66 4.8 6.12V24h-4v-8.53c0-2.03-.04-4.65-2.84-4.65-2.84 0-3.28 2.22-3.28 4.51V24H7V8.5z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-card group relative bg-surface-container-low rounded-xl overflow-hidden cursor-pointer">
+          <div class="w-full h-64 relative overflow-hidden">
+            <img src="team3.jpeg" alt="Operations Lead" class="w-full h-full object-cover object-top" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="hidden w-full h-full items-center justify-center bg-gradient-to-br from-primary/10 to-primary-container/20">
+              <span class="material-symbols-outlined text-primary/30 text-[80px]" style="font-variation-settings: 'FILL' 1;">person</span>
+            </div>
+            <div class="team-overlay absolute inset-0 bg-primary/80 flex items-center justify-center p-md">
+              <p class="text-white text-sm text-center leading-relaxed">Oversees all hub operations and student welfare, ensuring every cohort receives a world-class learning experience from day one.</p>
+            </div>
+          </div>
+          <div class="p-md">
+            <div class="font-bold text-primary"></div>
+            <div class="text-sm text-secondary font-medium"></div>
+            <div class="flex gap-2 mt-sm">
+              <a href="https://www.linkedin.com/company/tech2grassrootsafrica/" class="text-on-surface-variant hover:text-primary transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm6.5 0h3.84v2.14h.05c.53-1 1.84-2.14 3.79-2.14 4.05 0 4.8 2.66 4.8 6.12V24h-4v-8.53c0-2.03-.04-4.65-2.84-4.65-2.84 0-3.28 2.22-3.28 4.51V24H7V8.5z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="team-card group relative bg-surface-container-low rounded-xl overflow-hidden cursor-pointer">
+          <div class="w-full h-64 relative overflow-hidden">
+            <img src="team4.jpeg" alt="Community Lead" class="w-full h-full object-cover object-top" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <div class="hidden w-full h-full items-center justify-center bg-gradient-to-br from-secondary/10 to-secondary-container/30">
+              <span class="material-symbols-outlined text-secondary/30 text-[80px]" style="font-variation-settings: 'FILL' 1;">person</span>
+            </div>
+            <div class="team-overlay absolute inset-0 bg-primary/80 flex items-center justify-center p-md">
+              <p class="text-white text-sm text-center leading-relaxed">Builds and nurtures the KIL alumni community, connecting graduates to opportunities and creating a lifelong support network.</p>
+            </div>
+          </div>
+          <div class="p-md">
+            <div class="font-bold text-primary"></div>
+            <div class="text-sm text-secondary font-medium"></div>
+            <div class="flex gap-2 mt-sm">
+              <a href="https://www.linkedin.com/company/tech2grassrootsafrica/" class="text-on-surface-variant hover:text-primary transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V24h-4V8.5zm6.5 0h3.84v2.14h.05c.53-1 1.84-2.14 3.79-2.14 4.05 0 4.8 2.66 4.8 6.12V24h-4v-8.53c0-2.03-.04-4.65-2.84-4.65-2.84 0-3.28 2.22-3.28 4.51V24H7V8.5z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Join the Team CTA -->
+      <div class="mt-lg bg-surface-container-low rounded-xl p-lg flex flex-col md:flex-row items-center justify-between gap-md">
+        <div>
+          <h3 class="font-h3 text-h3 text-primary">Want to Join the Team?</h3>
+          <p class="text-on-surface-variant mt-xs">We're always looking for passionate educators, mentors, and changemakers to join our growing community.</p>
+        </div>
+        <a href="mailto:tech2disn@gmail.com" class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:opacity-80 transition-opacity whitespace-nowrap flex items-center gap-2 shrink-0">
+          Get in Touch
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="py-xl px-6 bg-surface-container-low" id="gallery">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-lg">
+        <span class="font-label-caps text-secondary uppercase tracking-[0.2em]">Gallery</span>
+        <h2 class="font-h2 text-h2 text-primary mt-base">Life at the Innovation Lab</h2>
+        <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mt-sm">
+          A glimpse into the energy, community, and transformations happening every day inside our labs.
+        </p>
+      </div>
+
+      <!-- Masonry-style Gallery Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-md auto-rows-[200px]">
+
+        <!-- Large feature image - Slideshow -->
+        <div class="gallery-item col-span-2 row-span-2 rounded-xl overflow-hidden relative group bg-primary/10">
+          <!-- Slideshow Container -->
+          <div class="slideshow-container w-full h-full relative">
+            <!-- Slides -->
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_145819_624.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_145825_446.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_145828_319.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_145907_042.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_153538_403.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_153545_141.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_153548_560.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_153557_789.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_153608_381.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_153612_713.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_153624_654.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_153656_635.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_153700_361.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_153944_612.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_153959_052.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_154010_570.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_154044_029.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_154129_412.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_154148_952.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_154233_295.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_154259_243.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_154936_702.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_154939_837.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155028_080.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155057_381.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155102_738.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155108_324.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155110_880.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155120_628.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155125_280.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155127_285.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155128_541.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155140_850.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155148_911.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155220_224.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155229_427.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155244_723.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155256_436.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155300_113.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155816_405.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155841_159.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_155847_550.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_160748_244.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_160755_247.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_160802_560.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_160900_137.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_160908_122.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_160910_828.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_160926_612.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_161205_046.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_161211_108.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_161413_657.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_161417_715.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_161420_506.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_161459_691.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_161538_544.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+            <div class="slide fade opacity-0 transition-opacity duration-500">
+              <img src="Gallery/IMG_20260513_161543_500.jpg" alt="Gallery image" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button onclick="changeSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/30 hover:bg-white/50 text-white rounded-full w-10 h-10 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button onclick="changeSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/30 hover:bg-white/50 text-white rounded-full w-10 h-10 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100">
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+
+            <!-- Indicator Dots -->
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+              <div class="dot dot-active w-2 h-2 bg-white rounded-full cursor-pointer transition-all" onclick="currentSlide(0)"></div>
+              <div class="dot w-2 h-2 bg-white/50 rounded-full cursor-pointer transition-all hover:bg-white/70" onclick="currentSlide(1)"></div>
+              <div class="dot w-2 h-2 bg-white/50 rounded-full cursor-pointer transition-all hover:bg-white/70" onclick="currentSlide(2)"></div>
+              <div class="dot w-2 h-2 bg-white/50 rounded-full cursor-pointer transition-all hover:bg-white/70" onclick="currentSlide(3)"></div>
+              <div class="dot w-2 h-2 bg-white/50 rounded-full cursor-pointer transition-all hover:bg-white/70" onclick="currentSlide(4)"></div>
+            </div>
+
+            <!-- Overlay Caption -->
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-md">
+              <span class="text-white font-semibold text-sm">Moments from our Tech2school events</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Small images -->
+        <div class="gallery-item rounded-xl overflow-hidden relative group bg-primary/10">
+          <img src="WhatsApp Image 2026-05-14 at 11.32.31 AM.jpeg" alt="Student learning" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-sm">
+            <span class="text-white font-semibold text-xs">Hands-on learning</span>
+          </div>
+        </div>
+
+        <div class="gallery-item rounded-xl overflow-hidden relative group bg-secondary-container/40 flex items-center justify-center">
+          <img src="gallery3.jpeg" alt="Graduation day" class="w-full h-full object-cover" onerror="this.style.display='none'">
+          <div class="absolute inset-0 flex flex-col items-center justify-center p-sm text-center">
+            <span class="material-symbols-outlined text-secondary text-4xl mb-xs" style="font-variation-settings: 'FILL' 1;">school</span>
+            <span class="text-secondary text-xs font-bold">Graduation Day</span>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-sm">
+            <span class="text-white font-semibold text-xs">Graduation ceremony</span>
+          </div>
+        </div>
+
+        <div class="gallery-item rounded-xl overflow-hidden relative group bg-primary/10">
+          <img src="gallery4.jpeg" alt="Workshop" class="w-full h-full object-cover" onerror="this.style.display='none'">
+          <div class="hidden w-full h-full items-center justify-center bg-gradient-to-br from-primary/10 to-primary/20 absolute inset-0">
+            <span class="material-symbols-outlined text-primary/30 text-[60px]" style="font-variation-settings: 'FILL' 1;">groups</span>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-sm">
+            <span class="text-white font-semibold text-xs">Community workshop</span>
+          </div>
+        </div>
+
+        <div class="gallery-item rounded-xl overflow-hidden relative group bg-primary/5 flex items-center justify-center">
+          <img src="adam.jpeg" alt="Student project" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-sm">
+            <span class="text-white font-semibold text-xs">Student showcase</span>
+          </div>
+        </div>
+
+        <!-- Wide stat banner -->
+        <div class="gallery-item col-span-2 rounded-xl bg-primary p-lg flex items-center gap-lg overflow-hidden relative">
+          <div class="absolute right-0 top-0 w-32 h-32 bg-white/5 rounded-full translate-x-8 -translate-y-8"></div>
+          <div class="text-center flex-1">
+            <div class="text-3xl font-black text-secondary-container">500+</div>
+            <div class="text-white/70 text-xs mt-xs">Lives Changed</div>
+          </div>
+          <div class="w-px h-12 bg-white/20"></div>
+          <div class="text-center flex-1">
+            <div class="text-3xl font-black text-secondary-container">26</div>
+            <div class="text-white/70 text-xs mt-xs">Batches</div>
+          </div>
+          <div class="w-px h-12 bg-white/20"></div>
+          <div class="text-center flex-1">
+            <div class="text-3xl font-black text-secondary-container">3</div>
+            <div class="text-white/70 text-xs mt-xs">Active Hubs</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social Media Gallery CTA -->
+      <div class="mt-md text-center">
+        <p class="text-on-surface-variant text-sm mb-sm">See more on our social media</p>
+        <div class="flex justify-center gap-3">
+          <a href="https://www.instagram.com/tech2grassroots?igsh=MWF1YTA5Y254cnR1Ng==" class="inline-flex items-center gap-2 bg-white border border-surface-variant rounded-full px-5 py-2 text-sm font-medium text-primary hover:shadow-md transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.facebook.com/tech2grassroot?mibextid=ZbWKwL" class="inline-flex items-center gap-2 bg-white border border-surface-variant rounded-full px-5 py-2 text-sm font-medium text-primary hover:shadow-md transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.tiktok.com/@tech2grassroots.a?_r=1&_t=ZS-95XWSOCz8Cr" class="inline-flex items-center gap-2 bg-white border border-surface-variant rounded-full px-5 py-2 text-sm font-medium text-primary hover:shadow-md transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+            TikTok
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-xl px-6 bg-primary text-white text-center">
+    <div class="max-w-2xl mx-auto space-y-md">
+      <h2 class="font-h2 text-h2 text-white">Ready to Be Part of the Story?</h2>
+      <p class="font-body-lg text-white/70">
+        Whether you're a student, a sponsor, an educator, or a partner — there's a place for you in this movement.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-base">
+        <a href="courses.html" class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all flex items-center gap-2">
+          Apply Now
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+        <a href="mailto:tech2disn@gmail.com" class="border border-white/30 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-all">
+          Partner With Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-blue-900 text-white py-16">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+    <div class="col-span-1">
+      <div class="text-2xl font-black text-white mb-4">Kwara Innovation Lab</div>
+      <p class="text-slate-300 text-sm leading-relaxed mb-6">Empowering African Excellence through institutional trust and forward-thinking innovation.</p>
+    </div>
+    <div>
+      <h5 class="font-bold mb-6 text-yellow-500 font-label-caps uppercase text-xs">Explore</h5>
+      <ul class="space-y-4">
+        <li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="index.html#about">Courses</a></li>
+        <li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="about.html#vision">Vision</a></li>
+        <li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="about.html#network">Network</a></li>
+        <li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block text-yellow-500 font-semibold" href="courses.html">Apply</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="font-bold mb-6 text-yellow-500 font-label-caps uppercase text-xs">Resources</h5>
+      <ul class="space-y-4">
+        <li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Whitepaper</a></li>
+        <li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Impact Reports</a></li>
+        <li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Case Studies</a></li>
+        <li><a class="text-slate-300 hover:text-white transition-colors hover:translate-x-1 inline-block" href="#">Press Kit</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="font-bold mb-6 text-yellow-500 font-label-caps uppercase text-xs">Contact</h5>
+      <ul class="space-y-4 text-sm text-slate-300">
+        <li class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-sm mt-1">location_on</span>
+          Kwara State Library Complex, Ilorin, Nigeria
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-sm">call</span>
+          +2348066406464
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-sm">alternate_email</span>
+          tech2disn@gmail.com
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-8 pt-12 mt-12 border-t border-white/10 text-center text-slate-400 text-xs">
+    © 2026 Kwara Innovation Lab. Empowering African Excellence.
+  </div>
+</footer>
+
+<script>
+  let currentIndex = 0;
+  let autoplayInterval;
+
+  function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (index >= slides.length) {
+      currentIndex = 0;
+    } else if (index < 0) {
+      currentIndex = slides.length - 1;
+    } else {
+      currentIndex = index;
+    }
+
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('dot-active'));
+    
+    if (slides[currentIndex]) {
+      slides[currentIndex].classList.add('active');
+    }
+    
+    if (dots[currentIndex]) {
+      dots[currentIndex].classList.add('dot-active');
+    }
+  }
+
+  function changeSlide(n) {
+    clearInterval(autoplayInterval);
+    showSlide(currentIndex + n);
+    startAutoplay();
+  }
+
+  function currentSlide(n) {
+    clearInterval(autoplayInterval);
+    showSlide(n);
+    startAutoplay();
+  }
+
+  function startAutoplay() {
+    autoplayInterval = setInterval(() => {
+      showSlide(currentIndex + 1);
+    }, 5000); // Change slide every 5 seconds
+  }
+
+  // Initialize slideshow
+  showSlide(0);
+  startAutoplay();
+
+  // Pause autoplay on hover (already handled by group-hover for buttons)
+  const slideshowContainer = document.querySelector('.slideshow-container');
+  if (slideshowContainer && slideshowContainer.parentElement) {
+    slideshowContainer.parentElement.addEventListener('mouseenter', () => {
+      clearInterval(autoplayInterval);
+    });
+    
+    slideshowContainer.parentElement.addEventListener('mouseleave', () => {
+      startAutoplay();
+    });
+  }
+
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+    mobileMenu.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  });
+
+  document.getElementById('close-menu').addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    document.body.style.overflow = '';
+  });
+
+  document.getElementById('menu-backdrop').addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    document.body.style.overflow = '';
+  });
+
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+
+</body>
+</html>
