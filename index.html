@@ -593,63 +593,54 @@
 
       <!-- Right Panel: Form -->
       <div class="bg-white p-xl w-full md:w-3/5">
-        <form class="flex flex-col gap-md">
+        <form class="flex flex-col gap-md" id="modal-contact-form" action="https://formspree.io/f/mjglqndp" method="POST">
 
-          <!-- Row 1: First & Last Name -->
-          <div class="flex gap-md">
-            <div class="flex-1 flex flex-col gap-1">
-              <label class="text-sm font-medium text-primary">First Name</label>
-              <input type="text" placeholder="First Name"
-                class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" />
-            </div>
-            <div class="flex-1 flex flex-col gap-1">
-              <label class="text-sm font-medium text-primary">Last Name</label>
-              <input type="text" placeholder="Last Name"
-                class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" />
-            </div>
-          </div>
+                <div class="flex gap-md">
+                    <div class="flex-1 flex flex-col gap-1">
+                        <label class="text-sm font-medium text-primary">First Name</label>
+                        <input type="text" placeholder="First Name" class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" name="first_name" data-fs-field/>
+                    </div>
+                    <div class="flex-1 flex flex-col gap-1">
+                        <label class="text-sm font-medium text-primary">Last Name</label>
+                        <input type="text" placeholder="Last Name" class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" name="last_name" data-fs-field/>
+                    </div>
+                </div>
 
-          <!-- Row 2: Email & Phone -->
-          <div class="flex gap-md">
-            <div class="flex-1 flex flex-col gap-1">
-              <label class="text-sm font-medium text-primary">Email</label>
-              <input type="email" placeholder="Email Address"
-                class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" />
-            </div>
-            <div class="flex-1 flex flex-col gap-1">
-              <label class="text-sm font-medium text-primary">Phone Number</label>
-              <input type="tel" placeholder="Your Phone Number"
-                class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" />
-            </div>
-          </div>
+                <div class="flex gap-md">
+                    <div class="flex-1 flex flex-col gap-1">
+                        <label class="text-sm font-medium text-primary">Email</label>
+                        <input type="email" placeholder="Email Address" class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" name="email" data-fs-field/>
+                        <span data-fs-error="email"></span>
+                    </div>
+                    <div class="flex-1 flex flex-col gap-1">
+                        <label class="text-sm font-medium text-primary">Phone Number</label>
+                        <input type="tel" placeholder="Your Phone Number" class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full" name="phone_number" data-fs-field/>
+                    </div>
+                </div>
 
-          <!-- Subject -->
-          <div class="flex flex-col gap-1">
-            <label class="text-sm font-medium text-primary">Subject</label>
-            <select class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full appearance-none bg-white">
-              <option value="" disabled selected>Select a subject</option>
-              <option>General Enquiry</option>
-              <option>Bootcamp Registration</option>
-              <option>Partnership</option>
-              <option>Mentorship</option>
-              <option>Other</option>
-            </select>
-          </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-sm font-medium text-primary">Subject</label>
+                    <select class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full appearance-none bg-white" name="subject" data-fs-field>
+                        <option value="" disabled selected>Select a subject</option>
+                        <option>General Enquiry</option>
+                        <option>Bootcamp Registration</option>
+                        <option>Partnership</option>
+                        <option>Mentorship</option>
+                        <option>Other</option>
+                    </select>
+                </div>
 
-          <!-- Message -->
-          <div class="flex flex-col gap-1">
-            <label class="text-sm font-medium text-primary">Message</label>
-            <textarea rows="5" placeholder="Your Message"
-              class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full resize-none"></textarea>
-          </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-sm font-medium text-primary">Message</label>
+                    <textarea name="message" rows="5" placeholder="Your Message" class="border border-slate-200 rounded-lg px-4 py-3 text-sm text-primary placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1a1a6e]/30 w-full resize-none" data-fs-field></textarea>
+                    <span data-fs-error="message"></span>
+                </div>
 
-          <!-- Submit -->
-          <button type="submit"
-            class="bg-[#1a1a6e] hover:bg-[#13136b] text-white font-medium py-3 px-8 rounded-lg transition-colors self-end">
-            Send Message
-          </button>
+                <button type="submit" class="bg-[#1a1a6e] hover:bg-[#13136b] text-white font-medium py-3 px-8 rounded-lg transition-colors self-end" data-fs-submit-btn>
+                    Send Message
+                </button>
 
-        </form>
+            </form>
       </div>
 
     </div>
@@ -703,6 +694,80 @@
             © 2026 Kwara Innovation Lab. Empowering African Excellence.
         </div>
 </footer>
+<div id="toast"
+    style="position: fixed; top: 20px; right: 20px; background-color: #22c55e; color: white; padding: 16px 24px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); z-index: 9999; opacity: 0; visibility: hidden; transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; font-family: Inter, sans-serif; font-weight: 500;">
+    Message sent successfully 
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("modal-contact-form");
+        
+        if (!form) {
+            console.error("Form not found!");
+            return;
+        }
+        
+        const toast = document.getElementById("toast");
+        const submitBtn = form.querySelector("[data-fs-submit-btn]");
+
+        if (!submitBtn) {
+            console.error("Submit button not found!");
+            return;
+        }
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Sending...";
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        Accept: "application/json"
+                    }
+                });
+
+                console.log("Response status:", response.status);
+                console.log("Response ok:", response.ok);
+
+                if (response.ok) {
+                    // SHOW TOAST
+                    toast.style.opacity = "1";
+                    toast.style.visibility = "visible";
+
+                    console.log("Toast shown");
+
+                    // RESET FORM
+                    form.reset();
+
+                    // HIDE TOAST
+                    setTimeout(() => {
+                    toast.style.opacity = "0";
+                    toast.style.visibility = "hidden";
+                        console.log("Toast hidden");
+                    }, 3000);
+
+                } else {
+                    console.error("Form submission failed with status:", response.status);
+                    alert("Something went wrong.");
+                }
+
+            } catch (error) {
+                console.error("Network error:", error);
+                alert("Network error: " + error.message);
+            }
+
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Send Message";
+        });
+    });
+    </script>
 <script>
 
     
